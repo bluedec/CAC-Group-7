@@ -21,11 +21,17 @@ Jesús Saez
 
 ## Installation and Usage 🛠️
 Clone the project repository from GitHub.
+
 Open the project folder in a text editor such as Visual Studio Code.
+
 Open the index.html file in a web browser to view the web page.
+
 Make any changes to the HTML, CSS, or JavaScript files as needed.
+
 Refresh the web page in the browser to see the changes.
+
 Contributing
+
 This project is currently being developed by Group 7 for the Codo a Codo bootcamp and is not open for external contributions at this time.
 
 ## License 💼
