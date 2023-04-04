@@ -1,0 +1,24 @@
+
+* {
+	margin: 1rem;
+	box-sizing: border-box;	
+}
+
+html {
+	color: wheat;
+	background: conic-gradient(from 0.25turn at 50% 30%, #f69d3c, 10deg, #3f87a6, 350deg, #ebf8e1);
+}
+
+header {
+	height: 5rem;	
+	background-color: peru;
+}
+
+main {
+	background-color: #151515;
+}
+
+footer {
+	height: 5rem;
+	background-color: peru;
+}
