@@ -30,7 +30,8 @@ Make any changes to the HTML, CSS, or JavaScript files as needed.
 
 Refresh the web page in the browser to see the changes.
 
-Contributing
+
+## Contributing
 
 This project is currently being developed by Group 7 for the Codo a Codo bootcamp and is not open for external contributions at this time.
 
