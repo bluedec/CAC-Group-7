@@ -1,7 +1,10 @@
 # CAC-Group-7
-Codo a Codo Bootcamp Project: Group 7 Experimental Page
+# Codo a Codo Bootcamp Project: Group 7 Experimental Page
 Project Description
-This is a simple experimental web page project created by Group 7 as part of the Codo a Codo bootcamp. The project is built using HTML, CSS, and JavaScript and aims to explore different themes and aesthetics to create a unique and visually appealing web page.
+
+This is a simple experimental web page project created by Group 7 as part of the Codo a Codo bootcamp. 
+
+The project is built using HTML, CSS, and JavaScript and aims to explore different themes and aesthetics to create a unique and visually appealing web page.
 
 Project Members
 Jane Doe
