@@ -5,19 +5,58 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="./css/styles.css" rel="stylesheet">
-
+		<script src="js/index.js"></script>
+		<script src="https://kit.fontawesome.com/13c075f7a5.js" crossorigin="anonymous"></script>
 	</head>
 
-	<body>
+	<body id="body">
+		<!-- Para que la newsletter pueda estar centrada horizontalmente tuve que darle un wrapper -->
+		<section class="newsletter-wrapper">
+			<section id="newsletter" class="nws">
+				<button type="button" class="closeNewsletterButton" onClick="hide_newsletter()">X</button>
+				<h2>Si quieres puedes subscribirte a nuestra newsletter para obtener los mejores precios :0</h2>
+				<input type="text" name="text" placeholder="tu mail va aqui :3" value="">
+				<input type="submit" name="" value="Enviar!">
+			</section>
+			
+		</section>
+
+		<!-- To do:  -->
+		<section id="extensible-menu">
+			<ul>
+				<li></li>
+			</ul>
+			
+		</section>
+
+		<!--  -->
 		<header>
-			<nav class="nav">
-				<h1>Embera</h1>
-				<p>We are a brand.</p>
-			</nav>	
+			<h1 class="title">Embera</h1>
+			<p>We are a brand.</p>
 		</header>
 
+		<nav id="nav">
 
+			<button id="home-button" type="button">
+				<a href="index.html" class="home-link">
+					<i class="fa-solid fa-mountain-sun fa-2x"></i>
+				</a>
+			</button>
+
+			<section id="nav-flex-container">
+				<button type="button">
+					<i class="fa-solid fa-bars fa-2x"></i>			
+				</button>
+				<button type="button" onclick="">
+					<i class="fa-solid fa-magnifying-glass fa-2x"></i>				
+				</button>
+			</section>
+		</nav>	
+
+		<!--  -->
 		<main>
+			<h1 class="title">Embera</h1>
+			<!--  -->
 			<section class="main-wrapper">
 				<article class="default-article">
 					<h1>Embera</h1>
@@ -41,7 +80,7 @@
 				<h1>Embera</h1>
 				<h1>Embera</h1>
 				<h1>Embera</h1>
-				<h2>Embera</h1>
+				<h2>Embera</h2>
 				<p>We are a brand.</p>
 				<p>We are a brand.</p>
 				<p>We are a brand.</p>
@@ -56,6 +95,7 @@
 		</main>
 
 
+		<!--  -->
 		<footer>
 
 		</footer>
