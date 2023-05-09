@@ -107,10 +107,14 @@ main {
 	background-color: #500;
 }
 
+#newsletter > h2 {
+	padding: 5vw;
+}
+
 #newsletter > input {
 	font-size: 1rem;
 	padding: 0.2rem;
-	margin: 0.4rem;
+	margin: 2vw;
 
 }
 
