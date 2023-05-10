@@ -12,11 +12,26 @@
 	<body id="body">
 		<!-- Para que la newsletter pueda estar centrada horizontalmente tuve que darle un wrapper -->
 		<section class="newsletter-wrapper">
-			<section id="newsletter" class="nws">
-				<button type="button" class="closeNewsletterButton" onClick="hide_newsletter()">X</button>
+			<section id="newsletter" >
+
 				<h2>Si quieres puedes subscribirte a nuestra newsletter para obtener los mejores precios :0</h2>
-				<input type="text" name="text" placeholder="tu mail va aqui :3" value="">
-				<input type="submit" name="" value="Enviar!">
+
+				<section class="form-flex-wrapper">
+					<form action="">
+						<label for="user-mail">email:</label>	
+						<input id="user-mail" type="email" name="user-mail" placeholder="address@example.net">
+						<button class="submit-button" type="submit" name="" value="Enviar!"><i class="fa-solid fa-paper-plane fa-2x"></i></button>
+					</form>
+				</section>
+
+
+				<section class="closeButtonWrapper">
+					<button type="button" class="closeNewsletterButton" onClick="hide_newsletter()">
+						<i class="fa-solid fa-xmark fa-lg"></i>
+					</button>
+					
+				</section>
+
 			</section>
 			
 		</section>
@@ -32,7 +47,6 @@
 		<!--  -->
 		<header>
 			<h1 class="title">Embera</h1>
-			<p>We are a brand.</p>
 		</header>
 
 		<nav id="nav">
@@ -55,7 +69,15 @@
 
 		<!--  -->
 		<main>
-			<h1 class="title">Embera</h1>
+			<section id="embera-title-spam">
+				<h2 draggable="true" class="main-title sale">Embera SALE</h2>
+				<h2 class="main-title sale">Embera SALE</h2>
+				<h2 class="main-title sale">Embera SALE</h2>
+				<h2 class="main-title sale">Embera SALE</h2>
+				<h2 class="main-title sale">Embera SALE</h2>
+				<h2 class="main-title">HASTA 30% OFF</h2>
+				
+			</section>
 			<!--  -->
 			<section class="main-wrapper">
 				<article class="default-article">
@@ -74,22 +96,6 @@
 					<h1>Embera</h1>
 					<p>This is an article.</p>	
 				</article>
-				<h1>Embera</h1>
-				<h1>Embera</h1>
-				<h1>Embera</h1>
-				<h1>Embera</h1>
-				<h1>Embera</h1>
-				<h1>Embera</h1>
-				<h2>Embera</h2>
-				<p>We are a brand.</p>
-				<p>We are a brand.</p>
-				<p>We are a brand.</p>
-				<p>We are a brand.</p>
-				<p>We are a brand.</p>
-				<p>We are a brand.</p>
-				<p>We are a brand.</p>
-				<p>We are a brand.</p>
-				<p>We are a brand.</p>
 				
 			</section>
 		</main>
@@ -97,7 +103,19 @@
 
 		<!--  -->
 		<footer>
-
+			<button class="expandable-content-button">About Embera</button>		
+			<div class="line"></div>
+			<section class="footer-flex-container">
+				<section class="about-content">
+					<ul id="footer-list" title="About Embera">
+						<li><a href="#">Compañia</a></li>
+						<li><a href="#">Noticias Corporativas</a></li>
+						<li><a href="#">Inversionistas</a></li>
+						<li><a href="#">Sustentabilidad</a></li>
+						<li><a href="#">Empleos</a></li>
+					</ul>
+				</section>
+			</section>
 		</footer>
 	</body>
 </html>
