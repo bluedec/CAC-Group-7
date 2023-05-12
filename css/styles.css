@@ -2,6 +2,7 @@
 :root {
 	--cool-black: #15151a;
 	--cool-orange: peru;
+	--nav-bar-height: 4.2rem;
 }
 
 * {
@@ -56,7 +57,7 @@ a {
 	float: right;
 	padding: 1rem;
 	width: 100%;
-	height: 4.2rem;
+	height: var(--nav-bar-height);
 	z-index: 20;
 	background-color: var(--cool-black); 
 	position: fixed;
@@ -115,6 +116,50 @@ a {
 	}
 }
 
+#screen-dimmer {
+	z-index: 40;
+	width: 100%;
+	position: fixed;
+	opacity: 0.0;
+	z-index: 20;
+	background-color: var(--cool-black);
+	height: calc(100vh - var(--nav-bar-height));
+}
+
+#side-nav-bar {
+	max-width: 16rem;
+	width: 40vw;
+	right: -260px;
+	z-index: 20;
+	position: fixed;
+	height: calc(100vh - var(--nav-bar-height));
+	background-color: var(--cool-black);
+	border-left: 1px wheat solid;
+}
+
+
+.side-nav-flex-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.side-nav-button {
+	padding: 1rem;
+	border: none;
+	font-size: 1.1rem;
+	color: #ddd;
+	background-color: inherit; 
+	border-radius: 2px ;
+	border-bottom: 1px solid var(--cool-orange);
+	position: relative;
+	margin: 0.3rem;
+}
+
+.side-nav-button:hover {
+	border: 1px wheat solid;
+	top: -5px;
+}
+
 .main-title {
 	position: relative;
 	left: 10%;
@@ -139,7 +184,7 @@ a {
 #newsletter {
 	top: 0;
 	opacity: 0;
-	z-index: 3;
+	z-index: 40;
 	width: 80vw;
 	margin: 2rem;
 	margin-top: 0;
