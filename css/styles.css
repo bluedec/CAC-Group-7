@@ -1,0 +1,303 @@
+
+:root {
+	--cool-black: #15151a;
+	--cool-orange: peru;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+}
+
+html {
+	color: wheat;
+}
+
+body {
+	top: 4.2rem;
+	position: relative;
+}
+
+header {
+	padding: 1rem;
+	
+	position: relative;
+	height: calc(7rem + 2.5vw);	
+	background-color: var(--cool-orange);
+}
+
+main {
+	padding: 1rem;
+	box-sizing: border-box;
+	margin-top: 0;
+	overflow: auto;
+	margin-bottom: 0;
+	background-color: var(--cool-black);
+}
+
+a {
+	text-decoration: none;
+	color: var(--cool-black);
+}
+
+#embera-title-spam {
+	max-width: 80vw; 
+	
+}
+
+#extensible-menu {
+	position: absolute;
+	width: 0vw;
+	height: 0vh;
+}
+
+#nav {
+	float: right;
+	padding: 1rem;
+	width: 100%;
+	height: 4.2rem;
+	z-index: 20;
+	background-color: var(--cool-black); 
+	position: fixed;
+	top: 0rem;
+
+}
+#nav-flex-container {
+	display: flex;
+	flex-direction: row-reverse;	
+	position: relative;
+	top: -1.8rem;
+}
+#nav button {
+	padding-left: 0.7rem;
+	margin-right: 0.5rem;
+	border: none;
+	color: wheat;
+	background-color: var(--cool-black);
+}
+#nav button:hover {
+	color: white;
+}
+
+#home-button {
+	cursor: pointer; 
+}
+.home-link i {
+	font-size: 2.2rem;
+	color: wheat;
+}
+
+.fa-mountain-sun {
+	display: inline;
+
+}
+
+.title {
+
+	font-size: calc(3rem + 4vw);
+}
+.title::after {
+	position: absolute;
+	content: "Embera";
+	opacity: 0.2;
+	left: 2%;
+	transform-origin: center bottom;
+	animation: wiggle 4.4s linear infinite;
+}
+
+@keyframes wiggle {
+	from {
+		transform: rotate(0deg) translate(6px) rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg) translate(6px) rotate(-360deg);
+	}
+}
+
+.main-title {
+	position: relative;
+	left: 10%;
+	font-size: calc(3rem + 4vw);
+}
+#main-title-flex {
+	display: flex;
+	align-items: center;
+}
+.sale {
+	font-size: 12vw;
+}
+
+.newsletter-wrapper {
+	width: 100%;
+	height: 0%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#newsletter {
+	top: 0;
+	opacity: 0;
+	z-index: 3;
+	width: 80vw;
+	margin: 2rem;
+	margin-top: 0;
+	position: fixed;
+	max-width: 50rem;
+	align-self: center;
+	border-radius: 10px;
+	background-color: #500;
+	border: 1px #d1d1d1 solid;
+	padding: calc(1.5rem + 1.5vw);
+}
+
+#newsletter > h2 {
+	font-size: calc(1rem + 1.5vw);
+	padding-bottom: 0.5rem;
+}
+
+#newsletter input {
+	background-color: var(--cool-black); 
+	width: calc(24vw + 4rem);
+	border: none;
+	color: wheat;
+	padding: 0.2rem;
+	text-align: center;
+	border-radius: 4px;
+	margin-top: 0.5rem;
+
+}
+
+.user-name {
+	
+}
+
+.form-flex-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.closeButtonWrapper {
+	display: flex;
+	margin-top: 1.4rem;
+	justify-content: center;
+}
+
+.closeNewsletterButton {
+	bottom: 1px;
+	border: none;
+	padding: 6px;
+	font-size: 1.2rem;
+	position: absolute;
+	margin-top: 0.5rem;
+	border-radius: 10px;	
+	font-family: cursive;
+	margin-bottom: 0.5rem;
+	text-decoration: none;	
+	background-color: inherit;
+}
+
+.closeNewsletterButton::before {
+	content: "";
+	position: absolute;
+	top: 49.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 0%;
+	width: 0%;
+	background-color: #f9f9f9;
+	opacity: 0.1;
+	transition: all 0.3s ease-out;
+	border-radius: 100px;
+}
+
+.closeNewsletterButton:hover::before {
+	height: 80%;
+	width: 100%;
+}
+
+.closeNewsletterButton:hover {
+	cursor: pointer;
+	color: white;
+}
+
+.divider {
+	width: 100%;
+	margin: .7rem 0 .7rem;
+	border: 1px var(--cool-black) solid;
+
+}
+
+.submit-button {
+	margin: 1rem;
+	top: 0.3rem;
+	position: relative;
+	background-color: inherit;
+	cursor: pointer;
+	border: none;
+}
+.fa-paper-plane {
+	color: wheat;
+}
+.fa-paper-plane:hover {
+	color: white;
+}
+
+
+.main-wrapper {
+	position: relative;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+
+.default-article {
+	margin: 1rem;
+	padding: 1rem;
+	border: 1px #d1d1d1 solid;
+	border-radius: 5px;
+	background: conic-gradient(from 0.25turn at 50% 30%, #f69d3c, 10deg, #3f87a6, 350deg, #ebf8e1);
+}
+
+footer {
+	min-height: 10rem;
+	background-color: var(--cool-orange);
+}
+
+.footer-flex-container {
+	display: flex;
+	padding-left: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+
+
+.expandable-content-button {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.3rem;
+	border: none;
+	position: relative;
+	left: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+.line {
+	width: 90vw;
+	height: 2px;
+	background-color: var(--cool-black);
+	margin: auto;
+}
+
+#footer-list  {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+}
+
+@media (max-width: 400px) {
+}
+
