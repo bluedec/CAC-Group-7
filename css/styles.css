@@ -22,7 +22,6 @@ body {
 
 header {
 	padding: 1rem;
-	
 	position: relative;
 	height: calc(7rem + 2.5vw);	
 	background-color: var(--cool-orange);
@@ -30,10 +29,10 @@ header {
 
 main {
 	padding: 1rem;
-	box-sizing: border-box;
 	margin-top: 0;
 	overflow: auto;
 	margin-bottom: 0;
+	box-sizing: border-box;
 	background-color: var(--cool-black);
 }
 
@@ -54,27 +53,32 @@ a {
 }
 
 #nav {
+	top: 0rem;
+	width: 100%;
+	z-index: 20;
 	float: right;
 	padding: 1rem;
-	width: 100%;
-	height: var(--nav-bar-height);
-	z-index: 20;
-	background-color: var(--cool-black); 
 	position: fixed;
-	top: 0rem;
+	height: var(--nav-bar-height);
+	background-color: var(--cool-black); 
 
 }
 #nav-flex-container {
+	float: right;
+	width: 100px;
+	top: 0.5rem;
 	display: flex;
-	flex-direction: row-reverse;	
 	position: relative;
-	top: -1.8rem;
+	flex-direction: row-reverse;	
 }
+
+
 #nav button {
-	padding-left: 0.7rem;
-	margin-right: 0.5rem;
+	cursor: pointer;
 	border: none;
 	color: wheat;
+	padding-left: 0.7rem;
+	margin-right: 0.5rem;
 	background-color: var(--cool-black);
 }
 #nav button:hover {
@@ -82,7 +86,10 @@ a {
 }
 
 #home-button {
-	cursor: pointer; 
+	left: 20px;
+	width: 50px;
+	height: 100%;
+	z-index: 400;
 }
 .home-link i {
 	font-size: 2.2rem;
@@ -90,8 +97,13 @@ a {
 }
 
 .fa-mountain-sun {
+	margin-left: 0.7rem;
 	display: inline;
 
+}
+
+.fa-mountain-sun:hover {
+	color: white;
 }
 
 .title {
@@ -99,10 +111,10 @@ a {
 	font-size: calc(3rem + 4vw);
 }
 .title::after {
-	position: absolute;
-	content: "Embera";
-	opacity: 0.2;
 	left: 2%;
+	opacity: 0.2;
+	content: "Embera";
+	position: absolute;
 	transform-origin: center bottom;
 	animation: wiggle 4.4s linear infinite;
 }
@@ -117,24 +129,23 @@ a {
 }
 
 #screen-dimmer {
-	z-index: 40;
 	width: 100%;
-	position: fixed;
-	opacity: 0.0;
 	z-index: 20;
+	opacity: 0.0;
+	position: fixed;
 	background-color: var(--cool-black);
 	height: calc(100vh - var(--nav-bar-height));
 }
 
 #side-nav-bar {
-	max-width: 16rem;
 	width: 40vw;
-	right: -260px;
 	z-index: 20;
+	right: -260px;
 	position: fixed;
-	height: calc(100vh - var(--nav-bar-height));
-	background-color: var(--cool-black);
+	max-width: 16rem;
 	border-left: 1px wheat solid;
+	background-color: var(--cool-black);
+	height: calc(100vh - var(--nav-bar-height));
 }
 
 
@@ -161,8 +172,8 @@ a {
 }
 
 .main-title {
-	position: relative;
 	left: 10%;
+	position: relative;
 	font-size: calc(3rem + 4vw);
 }
 #main-title-flex {
@@ -170,7 +181,7 @@ a {
 	align-items: center;
 }
 .sale {
-	font-size: 12vw;
+	font-size: calc(1rem + 8vw);
 }
 
 .newsletter-wrapper {
@@ -182,9 +193,9 @@ a {
 }
 
 #newsletter {
-	top: 0;
+	top: -20rem;
+	z-index: 0;
 	opacity: 0;
-	z-index: 40;
 	width: 80vw;
 	margin: 2rem;
 	margin-top: 0;
@@ -203,14 +214,14 @@ a {
 }
 
 #newsletter input {
-	background-color: var(--cool-black); 
-	width: calc(24vw + 4rem);
 	border: none;
 	color: wheat;
 	padding: 0.2rem;
+	margin-top: 0.5rem;
 	text-align: center;
 	border-radius: 4px;
-	margin-top: 0.5rem;
+	width: calc(24vw + 4rem);
+	background-color: var(--cool-black); 
 
 }
 
@@ -231,31 +242,31 @@ a {
 }
 
 .closeNewsletterButton {
-	bottom: 1px;
+	text-decoration: none;	
+	font-family: cursive;
+	position: absolute;
 	border: none;
+	bottom: 1px;
 	padding: 6px;
 	font-size: 1.2rem;
-	position: absolute;
 	margin-top: 0.5rem;
 	border-radius: 10px;	
-	font-family: cursive;
 	margin-bottom: 0.5rem;
-	text-decoration: none;	
 	background-color: inherit;
 }
 
 .closeNewsletterButton::before {
-	content: "";
+	border-radius: 100px;
 	position: absolute;
+	content: "";
 	top: 49.5%;
 	left: 50%;
-	transform: translate(-50%, -50%);
-	height: 0%;
 	width: 0%;
-	background-color: #f9f9f9;
+	height: 0%;
 	opacity: 0.1;
+	background-color: #f9f9f9;
 	transition: all 0.3s ease-out;
-	border-radius: 100px;
+	transform: translate(-50%, -50%);
 }
 
 .closeNewsletterButton:hover::before {
@@ -276,12 +287,12 @@ a {
 }
 
 .submit-button {
-	margin: 1rem;
 	top: 0.3rem;
+	margin: 1rem;
+	border: none;
+	cursor: pointer;
 	position: relative;
 	background-color: inherit;
-	cursor: pointer;
-	border: none;
 }
 .fa-paper-plane {
 	color: wheat;
@@ -292,16 +303,16 @@ a {
 
 
 .main-wrapper {
+	padding: 1rem;
 	position: relative;
 	box-sizing: border-box;
-	padding: 1rem;
 }
 
 .default-article {
 	margin: 1rem;
 	padding: 1rem;
-	border: 1px #d1d1d1 solid;
 	border-radius: 5px;
+	border: 1px #d1d1d1 solid;
 	background: conic-gradient(from 0.25turn at 50% 30%, #f69d3c, 10deg, #3f87a6, 350deg, #ebf8e1);
 }
 
@@ -319,22 +330,22 @@ footer {
 
 
 .expandable-content-button {
-	font-family: 'Times New Roman', Times, serif;
-	font-size: 1.3rem;
-	border: none;
-	position: relative;
 	left: 2rem;
+	border: none;
+	cursor: pointer;
 	margin-top: 2rem;
+	font-size: 1.3rem;
+	position: relative;
 	margin-bottom: 0.5rem;
 	background-color: inherit;
-	cursor: pointer;
+	font-family: 'Times New Roman', Times, serif;
 }
 
 .line {
 	width: 90vw;
 	height: 2px;
-	background-color: var(--cool-black);
 	margin: auto;
+	background-color: var(--cool-black);
 }
 
 #footer-list  {

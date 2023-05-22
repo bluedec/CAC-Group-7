@@ -13,11 +13,13 @@ function show_newsletter() {
 	let newsletter = document.getElementById('newsletter');
 	let margin_top = 0;
 	let opacity    = 0;
-
+	newsletter.style.zIndex = 40;
 	showed = true; // showed se vuelve true para que no se vuelva a mostrar 
+	console.log("Showing newsletter...")
+	
+	newsletter.style.top = "0rem";
 
 	const interv = setInterval(function() {
-		console.log("Showing newsletter...")
 
 		margin_top += 1;
 		opacity    += 0.01; 
@@ -28,29 +30,30 @@ function show_newsletter() {
 		if (newsletter.style.opacity >= 1) {
 			clearInterval(interv);
 		}
-	}, 10)
+	}, 8)
 }
 
 function hide_newsletter() {
 	let newsletter = document.getElementById('newsletter');
-	let margin_top = 100;
-	let opacity    = 1;
+	let opacity = 1;
+	let top = 0;
+	console.log("Hiding newsletter...")
 
 	const interv = setInterval(function() {
-		console.log("Hiding newsletter...")
 
-		margin_top -= 1; 
+		top -= 1; 
 		opacity -= 0.01;
 
-		newsletter.style.marginTop = `${margin_top}px`;
+		newsletter.style.top = `${top}px`;
 		newsletter.style.opacity = opacity;
 
 		if (newsletter.style.opacity <= 0) {
 			clearInterval(interv);
+			newsletter.style.top = "-20rem";
 		}
-	}, 10)
+	}, 8);
 
-	newsletter.style.top = 1;
+
 }
 
 let is_nav_open = false;
@@ -87,6 +90,9 @@ function show_side_nav_bar() {
 }
 
 function close_side_nav_bar() {
+	if (is_nav_open === false) {
+		return;
+	}
 	const nav = document.getElementById("side-nav-bar");
 	const dimmer = document.getElementById("screen-dimmer");
 
