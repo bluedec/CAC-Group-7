@@ -8,7 +8,7 @@
 .container{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(33, 33, 94, 0.8),rgba(25, 25, 85, 0.8)),url(/login/img/Blossom.jpg);
+    background-image: linear-gradient(rgba(33, 33, 94, 0.8),rgba(25, 25, 85, 0.8)),url(/templates/login/img/Blossom.jpg);
     background-position: center;
     background-size: 100%;
     position: relative;
