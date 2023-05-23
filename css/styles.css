@@ -23,7 +23,7 @@ body {
 header {
 	padding: 1rem;
 	position: relative;
-	height: calc(7rem + 2.5vw);	
+	height: calc(4rem + 10vh);	
 	background-color: var(--cool-orange);
 }
 
@@ -41,11 +41,37 @@ a {
 	color: var(--cool-black);
 }
 
-#embera-title-spam {
-	max-width: 80vw; 
-	
+.moon {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50px;
+	background-color: snow;
+	position: absolute;
+	box-shadow: 0 0 100px 100px #44a;
+	left: 8vw;
+	top: 330px;
+	animation: orbit 10s ease-in-out infinite;
+	cursor: pointer;
+}
+@keyframes orbit {
+	50% {
+		transform: translate(75vw);
+	}
 }
 
+#embera-title-spam {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 75vw; 
+	
+}
+#embera-title-spam > h2 {
+	min-width: 120px;
+	max-width: 1200px;
+	text-align: center;
+}
 #extensible-menu {
 	position: absolute;
 	width: 0vw;
@@ -61,6 +87,7 @@ a {
 	position: fixed;
 	height: var(--nav-bar-height);
 	background-color: var(--cool-black); 
+	border-bottom: 1px var(--cool-orange) solid;
 
 }
 #nav-flex-container {
@@ -110,6 +137,7 @@ a {
 	font-family: 'Times New Roman', Times, serif;
 	font-size: calc(3rem + 4vw);
 }
+
 .title::after {
 	left: 2%;
 	opacity: 0.2;
@@ -168,11 +196,12 @@ a {
 }
 
 .side-nav-button:hover {
+	cursor: pointer;
 	border: 1px wheat solid;
 	top: -5px;
 }
 
-.main-title {
+.spam {
 	left: 10%;
 	position: relative;
 	font-size: calc(3rem + 4vw);
@@ -307,18 +336,32 @@ a {
 	padding: 1rem;
 	position: relative;
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+.article-flex-container {
+	justify-content: center;
+	display: flex;
 }
 
 .default-article {
-	margin: 1rem;
+	width: 40%;
+	height: 30vw;
+	margin: 0.5rem;
 	padding: 1rem;
 	border-radius: 5px;
 	border: 1px #d1d1d1 solid;
 	background: conic-gradient(from 0.25turn at 50% 30%, #f69d3c, 10deg, #3f87a6, 350deg, #ebf8e1);
 }
 
+.default-article:hover {
+	cursor: pointer;
+	border: 2px #e1e1e1 solid;
+}
+
 footer {
-	min-height: 10rem;
+	min-height: 9rem;
 	background-color: var(--cool-orange);
 }
 
@@ -355,5 +398,6 @@ footer {
 	list-style-type: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1200px) {
+		
 }

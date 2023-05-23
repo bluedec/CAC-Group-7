@@ -1,4 +1,5 @@
 
+
 // whenever the user scrolls, show the newsletter advertisement
 let showed = false;
 window.onscroll = function() {
@@ -115,6 +116,10 @@ function close_side_nav_bar() {
         }
     }, 5);
 
+}
+
+function alert_something(text) {
+	alert(text);
 }
 
 // function that is passed an html element and changes it's 
