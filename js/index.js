@@ -66,6 +66,7 @@ function show_side_nav_bar() {
 	const nav = document.getElementById("side-nav-bar");
 	const dimmer = document.getElementById("screen-dimmer");
 
+	dimmer.style.zIndex = 20;
 	is_nav_open = true;
 	
 	let right_position = -260;
@@ -110,6 +111,7 @@ function close_side_nav_bar() {
 		
 		if (dimmer_opacity < 0.01 && right_position < -260) {
 			clearInterval(interv);
+			dimmer.style.zIndex = -20;
 		}
 	}, 5);
 	

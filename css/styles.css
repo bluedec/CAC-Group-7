@@ -11,6 +11,7 @@
 	box-sizing: border-box;	
 }
 
+
 html {
 	color: wheat;
 }
@@ -23,7 +24,7 @@ body {
 header {
 	padding: 1rem;
 	position: relative;
-	height: calc(7rem + 2.5vw);	
+	height: calc(6rem + 2.5vw);	
 	background-color: var(--cool-orange);
 }
 
@@ -130,7 +131,7 @@ a {
 
 #screen-dimmer {
 	width: 100%;
-	z-index: 20;
+	z-index: -20;
 	opacity: 0.0;
 	position: fixed;
 	background-color: var(--cool-black);
