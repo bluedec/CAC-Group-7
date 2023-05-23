@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="signincss.css">
+    <script src="https://kit.fontawesome.com/0df88ec4ca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Top Navigation Bar -->
+<nav id="nav">
+    <a href="/index.html" class="home-link">
+        <i class="fa-solid fa-mountain-sun fa-2x"></i>
+    </a>
+
+    <section id="nav-flex-container">
+      <button class="open-sidebar-button" type="button" onClick="show_side_nav_bar()">
+        <i class="fa-solid fa-bars fa-2x"></i>			
+      </button>
+      <button type="button" onclick="">
+        <i class="fa-solid fa-magnifying-glass fa-2x"></i>				
+      </button>
+    </section>
+  </nav>	
+
+  <!-- Screen Dimmer -->
+  <section id="screen-dimmer" onClick="close_side_nav_bar()"></section>
+
+  <!-- Side Navigation Bar -->
+  <section id="side-nav-bar">
+    <section class="side-nav-flex-container">
+      <button type="button" class="side-nav-button">Mujeres</button>
+      <button type="button" class="side-nav-button">Hombres</button>
+      <button type="button" class="side-nav-button">Niños</button>
+      <a href="/login/signin.html"><button type="button" class="side-nav-button">Iniciar Sesión / Registrarse</button></a>
+      <a href="/Contacto/Contacto.html"><button type="button" class="side-nav-button">contacto</button></a>
+    </section>	
+
+    <!-- Añadir imagen de gatos!!-->		
+    <img src="" alt="">
+  </section>
+
+  <header id="main-title-flex">
+    <h1 class="title">Embera</h1>
+  </header>
+
+
+    <section class="container">
+        <section class="form-box">
+            <h1 id="title2">Registrarse</h1>
+            <form action="">
+                <section class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Nombre completo">
+                    </div>
+
+                    <section class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Mail">
+                    </section>
+
+                    <section class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Contraseña">
+                    </section>
+                    <p><a href="#" id="forgetPass"></a></p>
+                </section>
+                
+                <button type="button" id="sendBtn">Crear Cuenta</button>
+                
+                <section class="btn-field">
+                    <button type="button" id="registrarseBtn">Registrarse</button>
+                    <button type="button" id="signinBtn" class="disabled">Iniciar sesión</button>
+
+
+                </section>
+            </form>
+            
+        </section>
+    </section>
+    
+    <script src="signinjs.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
