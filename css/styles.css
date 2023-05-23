@@ -11,7 +11,6 @@
 	box-sizing: border-box;	
 }
 
-
 html {
 	color: wheat;
 }
@@ -24,7 +23,7 @@ body {
 header {
 	padding: 1rem;
 	position: relative;
-	height: calc(6rem + 2.5vw);	
+	height: calc(7rem + 2.5vw);	
 	background-color: var(--cool-orange);
 }
 
@@ -108,7 +107,7 @@ a {
 }
 
 .title {
-
+	font-family: 'Times New Roman', Times, serif;
 	font-size: calc(3rem + 4vw);
 }
 .title::after {
@@ -156,12 +155,13 @@ a {
 }
 
 .side-nav-button {
+	min-width: 100%;
 	padding: 1rem;
 	border: none;
 	font-size: 1.1rem;
 	color: #ddd;
 	background-color: inherit; 
-	border-radius: 2px ;
+	border-radius: 2px;
 	border-bottom: 1px solid var(--cool-orange);
 	position: relative;
 	margin: 0.3rem;
@@ -357,4 +357,3 @@ footer {
 
 @media (max-width: 400px) {
 }
-
