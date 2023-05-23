@@ -39,21 +39,14 @@
 			</section>
 		</section>
 
-		<!--  -->
-		<header id="main-title-flex">
-			<h1 class="title">Embera</h1>
-		</header>
-
+		<!-- Top Navigation Bar -->
 		<nav id="nav">
-
-			<button id="home-button" type="button">
-				<a href="index.html" class="home-link">
+			<a href="index.html" class="home-link">
 					<i class="fa-solid fa-mountain-sun fa-2x"></i>
-				</a>
-			</button>
+			</a>
 
 			<section id="nav-flex-container">
-				<button type="button">
+				<button class="open-sidebar-button" type="button" onClick="show_side_nav_bar()">
 					<i class="fa-solid fa-bars fa-2x"></i>			
 				</button>
 				<button type="button" onclick="">
@@ -61,6 +54,27 @@
 				</button>
 			</section>
 		</nav>	
+
+		<!-- Screen Dimmer -->
+		<section id="screen-dimmer" onClick="close_side_nav_bar()"></section>
+
+		<!-- Side Navigation Bar -->
+		<section id="side-nav-bar">
+			<section class="side-nav-flex-container">
+				<button type="button" class="side-nav-button">Mujeres</button>
+				<button type="button" class="side-nav-button">Hombres</button>
+				<button type="button" class="side-nav-button">Niños</button>
+				<button type="button" class="side-nav-button">Mi Cuenta</button>
+			</section>	
+
+			<!-- Añadir imagen de gatos!!-->		
+			<img src="" alt="">
+		</section>
+
+		<header id="main-title-flex">
+			<h1 class="title">Embera</h1>
+		</header>
+
 
 		<!--  -->
 		<main>
