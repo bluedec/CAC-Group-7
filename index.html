@@ -7,6 +7,7 @@
 		<link href="./css/styles.css" rel="stylesheet">
 		<script src="js/index.js"></script>
 		<script src="https://kit.fontawesome.com/13c075f7a5.js" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	</head>
 
 	<body>
@@ -47,6 +48,13 @@
 				</a>
 			</button>
 
+			<!-- Container de botones -->
+			<section class="side-nav-flex-container">
+				<button type="button" class="nav-button"><span>Mujeres</span></button>
+				<button type="button" class="nav-button"><span>Hombres</span></button>
+				<button type="button" class="nav-button"><span>Niños</span></button>
+			</section>	
+
 			<section id="nav-flex-container">
 				<button type="button" onClick="show_side_nav_bar()">
 					<i class="fa-solid fa-bars fa-2x"></i>			
@@ -62,17 +70,14 @@
 
 		<!-- Side Navigation Bar -->
 		<section id="side-nav-bar">
-			<section class="side-nav-flex-container">
-				<button type="button" class="side-nav-button">Mujeres</button>
-				<button type="button" class="side-nav-button">Hombres</button>
-				<button type="button" class="side-nav-button">Niños</button>
-				<a href="./templates/login/signin.html"><button type="button" class="side-nav-button">Iniciar Sesión / Registrarse</button></a>
-				<a href="./templates/Contacto/Contacto.html"><button type="button" class="side-nav-button">contacto</button></a>
-			  </section>	
+			<a href="./templates/login/signin.html"><button type="button" class="side-nav-button">Iniciar Sesión / Registrarse</button></a>
+			<a href="./templates/Contacto/Contacto.html"><button type="button" class="side-nav-button">contacto</button></a>
 		</section>
 
 		<header id="main-title-flex">
-			<h1 class="title">Embera</h1>
+				<a href="index.html" class="home-link">
+					<h1 class="title">Embera</h1>
+				</a>
 		</header>
 
 
