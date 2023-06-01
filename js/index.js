@@ -1,5 +1,45 @@
 
 
+const validate = () => {
+	let name = document.getElementById('user-name').innerHTML;
+	let email = document.getElementById('user-mail').innerHTML;
+	console.log(name, email);
+
+	if (validateName(name) && validateEmail(email)) {
+		alert("Good to go!");	
+	} else {
+		alert("The name or email is incorrect.");
+	}
+
+}
+
+function validateName(name) {
+	const regex = /^[a-zA-Z ]+$/;
+	return regex.test(name);
+}
+
+function validateEmail(email) {
+	const regex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	return regex.test(email);
+}
+
+document.getElementById('user-mail').onblur = function() {
+	if (validateEmail(this.value)) {
+		// it's correct
+	} else {
+		alert("please add a correct email address");
+	}
+}
+
+
+window.addEventListener('resize', () => {
+	console.log("Nooooo don't touch me! Aararrggg");
+});
+
+window.addEventListener('scroll', () => {
+	console.log('Aaaaaaaaaaaaaaaaaaaaa');
+});
+
 // whenever the user scrolls, show the newsletter advertisement
 let showed = false;
 window.onscroll = function() {
@@ -15,13 +55,12 @@ function show_newsletter() {
 	let margin_top = 0;
 	let opacity    = 0;
 	newsletter.style.zIndex = 40;
-	showed = true; // showed se vuelve true para que no se vuelva a mostrar 
+	showed = true; // para que no se vuelva a mostrar 
 	console.log("Showing newsletter...")
 	
 	newsletter.style.top = "0rem";
 
 	const interv = setInterval(function() {
-
 		margin_top += 1;
 		opacity    += 0.01; 
 
@@ -41,8 +80,7 @@ function hide_newsletter() {
 	console.log("Hiding newsletter...")
 
 	const interv = setInterval(function() {
-
-		top -= 1; 
+		top -= 2; 
 		opacity -= 0.01;
 
 		newsletter.style.top = `${top}px`;
@@ -50,7 +88,7 @@ function hide_newsletter() {
 
 		if (newsletter.style.opacity <= 0) {
 			clearInterval(interv);
-			newsletter.style.top = "-20rem";
+			newsletter.style.top = "-30rem";
 		}
 	}, 8);
 

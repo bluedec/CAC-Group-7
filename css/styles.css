@@ -41,18 +41,20 @@ a {
 	color: var(--cool-black);
 }
 
-.moon {
-	width: 3rem;
-	height: 3rem;
+#moon {
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
 	border-radius: 50px;
 	background-color: snow;
 	position: absolute;
-	box-shadow: 0 0 100px 100px #44a;
+	box-shadow: 0 0 230px 100px #24a1f1;
 	left: 8vw;
 	top: 330px;
 	animation: orbit 10s ease-in-out infinite;
 	cursor: pointer;
 }
+
 @keyframes orbit {
 	50% {
 		transform: translate(75vw);
@@ -137,13 +139,14 @@ a {
 .title {
 	font-family: 'Times New Roman', Times, serif;
 	font-size: calc(3rem + 4vw);
+	color: #f4e1e1;
 }
 
 .title::after {
-	left: 2%;
 	opacity: 0.2;
 	content: "Embera";
 	position: absolute;
+	left: 12%;
 	transform-origin: center bottom;
 	animation: wiggle 4.4s linear infinite;
 }
@@ -155,6 +158,40 @@ a {
 	to {
 		transform: rotate(360deg) translate(6px) rotate(-360deg);
 	}
+}
+
+@keyframes wiggleBig {
+	from {
+		transform: rotate(0deg) translate(8px) rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg) translate(8px) rotate(-360deg);
+	}
+}
+
+.triangle-flex-wrapper {
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 100%;
+}
+.triangle-flex-wrapper > .triangle {
+
+}
+
+.triangle {
+	border-top: 10px solid transparent;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	width: 20%;
+	text-align: center;
+}
+
+.triangle::after {
+	opacity: 0.8;
+	content: "x";
+	position: absolute;
+	transform-origin: center bottom;
+	animation: wiggleBig 19.4s ease-in infinite;
 }
 
 #screen-dimmer {
@@ -197,7 +234,7 @@ a {
 	margin-left: calc(3 * 1.5vw);
 }
 
-.side-nav-button:hover {
+.nav-button:hover {
 	cursor: pointer;
 }
 
@@ -209,9 +246,15 @@ a {
 #main-title-flex {
 	display: flex;
 	align-items: center;
+	overflow: hidden;
 }
 .sale {
+	user-select: none;
 	font-size: calc(1rem + 8vw);
+}
+
+.inv {
+	color: var(--cool-black);
 }
 
 .newsletter-wrapper {
@@ -342,11 +385,13 @@ a {
 
 .article-flex-container {
 	justify-content: center;
+	flex-wrap: wrap;
 	display: flex;
 }
 
 .default-article {
 	width: 40%;
+	min-width: 250px;
 	height: 30vw;
 	margin: 0.5rem;
 	padding: 1rem;
@@ -398,6 +443,25 @@ footer {
 	list-style-type: none;
 }
 
-@media (max-width: 1200px) {
-		
+@media (max-width: 500px) {
+	.nav-button {
+		top: 3px;
+		padding: 1px;
+		display: none;
+		margin: 0.3rem;
+		min-width: 10%;
+		font-size: 1.1rem;
+		margin-right: 20px;
+		border-radius: 2px;
+		position: relative;
+		vertical-align: middle;
+		color: var(--cool-black);
+		margin-left: calc(3 * 1.5vw);
+		border: 1px var(--cool-black) !important;
+	}
+	.side-nav-button {
+	}		
+}
+
+@media (min-width: 1400px) {
 }

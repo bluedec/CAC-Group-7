@@ -5,9 +5,8 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="./css/styles.css" rel="stylesheet">
-		<script src="js/index.js"></script>
+		<link rel="shortcut icon" href="./">
 		<script src="https://kit.fontawesome.com/13c075f7a5.js" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	</head>
 
 	<body>
@@ -28,7 +27,7 @@
 						</article>
 
 					</form>
-					<button class="submit-button" type="submit" name="" value="Enviar!"><i class="fa-solid fa-paper-plane fa-2x"></i></button>
+					<button class="submit-button" type="submit" name="" value="Enviar!" onClick="validate()"><i class="fa-solid fa-paper-plane fa-2x"></i></button>
 				</section>
 
 				<section class="closeButtonWrapper">
@@ -70,18 +69,28 @@
 
 		<!-- Side Navigation Bar -->
 		<section id="side-nav-bar">
+				<button type="button" class="side-nav-button"><span>Mujeres</span></button>
+				<button type="button" class="side-nav-button"><span>Hombres</span></button>
+				<button type="button" class="side-nav-button"><span>Niños</span></button>
 			<a href="./templates/login/signin.html"><button type="button" class="side-nav-button">Iniciar Sesión / Registrarse</button></a>
 			<a href="./templates/Contacto/Contacto.html"><button type="button" class="side-nav-button">contacto</button></a>
 		</section>
 
 		<header id="main-title-flex">
+				<div class="triangle"></div>
 				<a href="index.html" class="home-link">
 					<h1 class="title">Embera</h1>
 				</a>
+				<div class="triangle"></div>
+				<div class="triangle"></div>
+				<div class="triangle"></div>
+				<div class="triangle"></div>
+				<div class="triangle"></div>
+				<div class="triangle"></div>
 		</header>
 
 
-		<section class="moon" onClick="alert_something('Hi! I\'m the moon!')">
+		<section id="moon" onClick="alert_something('Hi! I\'m the moon!')">
 				
 		</section>
 
@@ -92,8 +101,8 @@
 			<section class="main-wrapper">
 
 				<section id="embera-title-spam">
-					<h2 class="spam sale">SALE SALE</h2>
-					<h2 class="spam sale">HASTA 99% OFF</h2>
+					<h2 class="spam sale">SALE! SALE!</h2>
+					<h2 class="spam sale inv">HASTA 99% OFF</h2>
 				</section>
 
 				<section class="article-flex-container">
@@ -110,7 +119,7 @@
 				</section>
 
 				<section id="embera-title-spam">
-					<h2 draggable="true" class="spam sale">SALE SALE</h2>
+					<h2 draggable="true" class="spam sale">SALE! SALE!</h2>
 					<h2 class="spam sale">HASTA 99% OFF</h2>
 				</section>
 
@@ -127,6 +136,13 @@
 				</article>
 				
 			</section>
+			<div class="triangle-flex-wrapper">
+				<div class="triangle"></div>
+				<div class="triangle"></div>
+				<div class="triangle"></div>
+				<div class="triangle"></div>
+				<div class="triangle"></div>
+			</div>
 		</main>
 
 
@@ -146,5 +162,6 @@
 				</section>
 			</section>
 		</footer>
+		<script src="js/index.js"></script>
 	</body>
 </html>
