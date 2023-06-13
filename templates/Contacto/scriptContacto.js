@@ -16,8 +16,7 @@
 
     nombreError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
     return true;
-
-    
+ 
  }
 
  function validarApellido(){
@@ -74,13 +73,17 @@ function validarMensaje(){
     return true;
 }
 
-function validarForm(){
+sendBtn.addEventListener("click", function(event){
+    if (!validarForm()) {
+        event.preventDefault();
+        alert('Por favor, complete el formulario para enviar');
+    }
+});
+
+function validarForm() {
     if (!validarNombre() || !validarApellido() || !validarEmail() || !validarPais() || !validarMensaje()){
-        sendBtn.addEventListener("click", function(event){
-            event.preventDefault()
-          });
-        alert('Porfavor, complete el formulario para enviar')
         return false;
     }
+    return true;
 }
 

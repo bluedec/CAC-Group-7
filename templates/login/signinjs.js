@@ -1,9 +1,12 @@
-let registrarseBtn = document.getElementById("registrarseBtn");
-let signinBtn = document.getElementById("signinBtn");
-let nameField = document.getElementById("nameField");
-let title2 = document.getElementById("title2");
-let forgetPass = document.getElementById("forgetPass");
-let sendBtn = document.getElementById("sendBtn");
+const registrarseBtn = document.getElementById("registrarseBtn");
+const signinBtn = document.getElementById("signinBtn");
+const nameField = document.getElementById("nameField");
+const title2 = document.getElementById("title2");
+const forgetPass = document.getElementById("forgetPass");
+const sendBtn = document.getElementById("sendBtn");
+const nombreLoginError = document.getElementById("nombreLoginError");
+const emailLoginError = document.getElementById("emailLoginError");
+const passLoginError = document.getElementById("passLoginError");
 
 
 signinBtn.onclick = function(){
@@ -23,3 +26,17 @@ registrarseBtn.onclick = function(){
     forgetPass.innerHTML = "";
     sendBtn.innerHTML = "Crear Cuenta";
 }
+
+function validarNombre(){
+    const nombre = document.getElementById("nombreLogin").value;
+
+    
+    if(nombre.length < 2){
+        nombreLoginError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+        return false;
+    }
+
+    nombreLoginError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    return true;
+ 
+ }

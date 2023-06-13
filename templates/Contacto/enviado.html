@@ -46,50 +46,12 @@
     <h1 class="title">Embera</h1>
   </header>
 
-
   <section class="contenedor">
-    <form action="https://formsubmit.co/de68b5095eb9df2091000dd2920603da" method="POST" id="formulario">
-      <h2 id="h2form">¿Necesitas ayuda? ¡Contactános!</h2>
-      <section class="input-group">
-        <label>Nombre:</label>
-        <input type="text" name="nombre" placeholder="Ingrese su nombre" id="nombre-contacto" onkeyup="validarNombre()">
-        <span id="nombre-error"></span>
-      </section>
-
-      <section class="input-group">
-        <label>Apellido:</label>
-        <input type="text" name="apellido" placeholder="Ingrese su apellido" id="apellido-contacto" onkeyup="validarApellido()">
-        <span id="apellido-error"></span>
-      </section>
-
-      <section class="input-group">
-        <label>Email:</label>
-        <input type="email" name="email" placeholder="Ingrese su email" id="email-contacto" onkeyup="validarEmail()">
-        <span id="email-error"></span>
-      </section>
-
-      <section class="input-group">
-        <label id="paisTexto" for="pais">País:</label>
-          <select id="pais" name="pais" onclick="validarPais()">
-            <option id="blank" value="" selected="selected" disabled="disabled">Seleccione su país</option>
-            <option value="argentina">Argentina</option>
-            <option value="brasil">Brasil</option>
-            <option value="peru">Perú</option>
-            <option value="chile">Chile</option>
-          </select>
-            <span id="pais-error"></span>
-      </section>
-      <section class="input-group">
-        <label>Dejanos tu mensaje:</label>
-        <textarea rows="5" id="mensaje-contacto" name="mensaje" onkeyup="validarMensaje()" placeholder="Mensaje:"></textarea>
-        <span id="mensaje-error"></span>
-      </section>
-
-    <button id="sendBtn" onclick="validarForm()">Enviar</button>
-    <input type="hidden" name="_next" value="http://127.0.0.1:5500/Contacto/Contacto.html">
-    <input type="hidden" name="_captcha" value="false">
+    <form action="">
+        <h2>El mensaje ha sido enviado correctamente.</h2>
     </form>
   </section>
+
 
   <footer>
     <button class="expandable-content-button">About Embera</button>		
