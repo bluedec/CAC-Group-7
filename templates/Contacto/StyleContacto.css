@@ -19,7 +19,7 @@
     width: 90%;
     max-width: 30rem;
     padding: 1rem 1rem 20px;
-    background: linear-gradient(180deg, #3f87a6, #f69d3c 80%);
+    background: rgb(245, 200, 116);
     border-radius: 4px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     position: relative;
