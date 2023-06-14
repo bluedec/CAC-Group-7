@@ -1,18 +1,27 @@
 
 
-let isSearchExpanded = false;
 
+let search = document.getElementById("search");
+search.addEventListener("click", () => {
+	console.log(search);
+});
+
+
+let isSearchExpanded = false;
 const expand_or_retract = () => {
 	if (isSearchExpanded) {
 		let search_box = document.querySelector('.search-expanded');
+		let search_section = document.getElementsByClassName('search-section-expanded');
 
 		search_box.className = "search";
+
 		isSearchExpanded = false;
 		return;
 	} else {
 		let search_box = document.querySelector('.search');
 
 		search_box.className = "search-expanded"; 
+
 		isSearchExpanded = true;
 		return;
 	}
@@ -117,9 +126,10 @@ function hide_newsletter() {
 
 }
 
-let is_nav_open = false;
 
+let is_nav_open = false;
 function show_side_nav_bar() {
+	console.log(is_nav_open)
     if (is_nav_open) {
         close_side_nav_bar();
         return

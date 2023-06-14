@@ -31,7 +31,6 @@ header {
 main {
 	padding: 0;
 	margin-top: 0;
-	overflow: auto;
 	margin-bottom: 0;
 	box-sizing: border-box;
 	background-color: var(--cool-black);
@@ -40,6 +39,10 @@ main {
 a {
 	text-decoration: none;
 	color: var(--cool-black);
+}
+
+p {
+	font-family: Arial, sans-serif;
 }
 
 #moon {
@@ -56,9 +59,12 @@ a {
 	animation: orbit 10s ease-in-out infinite;
 }
 
+#main-pic-2 {
+	display: none;
+}
+
 .womoon {
 	left: 8vw;
-	top: 330px;
 	width: 2rem;
 	height: 2rem;
 	cursor: pointer;
@@ -72,7 +78,6 @@ a {
 
 .womoon-2 {
 	right: 8vw;
-	top: 330px;
 	width: 2rem;
 	height: 2rem;
 	cursor: pointer;
@@ -97,6 +102,7 @@ a {
 }
 
 #embera-title-spam {
+	margin: 2.5rem auto 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -137,16 +143,16 @@ a {
 }
 
 .nav-flex-container {
+	float: right;
 	font-size: 1.3rem;
 }
 
 #nav-flex-container-right {
-	width: 100px;
 	right: 1.9rem;
-	top: 0.8rem;
-	display: flex;
 	position: absolute;
+	display: flex;
 	flex-direction: row-reverse;	
+	
 }
 
 
@@ -164,7 +170,7 @@ a {
 	margin-right: 0.5rem;
 	padding-left: 0.7rem;
 	vertical-align: middle;
-	margin-left: calc(3 * 1.5vw);
+	margin-left: calc(1rem);
 	background-color: var(--cool-black);
 }
 
@@ -228,6 +234,11 @@ a {
 	}
 }
 
+.semi-title {
+	font-size: 2rem;
+	margin-left: 4rem;
+}
+
 .triangle-flex-wrapper {
 	display: flex;
 	flex-grow: 1;
@@ -238,6 +249,8 @@ a {
 	border-top: 10px solid transparent;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
+	margin-bottom: 1rem;
+	min-width: 3rem;
 	width: 20%;
 	text-align: center;
 }
@@ -277,7 +290,6 @@ a {
 
 
 .spam {
-	left: 10%;
 	position: relative;
 	font-size: calc(3rem + 4vw);
 }
@@ -338,8 +350,9 @@ a {
 
 }
 
-.user-name {
-	
+.flex-container {
+	display: flex;
+	flex-direction: row;
 }
 
 .form-flex-wrapper {
@@ -416,20 +429,45 @@ a {
 }
 
 .search {
-	display: none;
-	height: 0;
-	width: 0;
+	top: 0.6rem;
+	width: 0rem;
+	height: 1.3rem;
+	transition: 1.2s;
+	position: relative;
+	animation: hide_search 1.2s ease-in;
+	animation-fill-mode: forwards;
 	background-color: var(--cool-black);
+}
+
+@keyframes hide_search {
+	0% {
+		width: 6rem;
+	}
+	100% {
+		width: 0rem;
+		opacity: 0;
+	}
 }
 
 .search-expanded {
 	display: inline;
 	position: relative;
-	top: 0.8rem;
+	top: 0.6rem;
 	height: 1.3rem;
-	width: 3rem;
+	width: 6rem;
 	transition: 1.2s;
 	animation: show_search 1.2s ease-out;
+}
+
+@keyframes show_search {
+	0% {
+		width: 0;
+		opacity: 0;
+	}
+	100% {
+		width: 6rem;
+		opacity: 1;
+	}
 }
 
 .main-wrapper {
@@ -508,7 +546,8 @@ footer {
 	list-style-type: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 560px) {
+
 	.nav-flex-container > a {
 		top: 3px;
 		padding: 1px;
@@ -523,6 +562,16 @@ footer {
 		color: var(--cool-black);
 		margin-left: calc(3 * 1.5vw);
 		border: 1px var(--cool-black) !important;
+	}
+
+}
+@media (max-width: 760px) {
+	#main-pic {
+		display: none;
+	}
+	
+	#main-pic-2 {
+		display: unset;
 	}
 
 }

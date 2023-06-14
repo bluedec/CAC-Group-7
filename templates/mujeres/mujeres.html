@@ -6,7 +6,6 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="../../css/styles.css" rel="stylesheet">
-		<link rel="shortcut icon" href="./">
 		<script src="https://kit.fontawesome.com/13c075f7a5.js" crossorigin="anonymous"></script>
 	</head>
 
@@ -31,7 +30,7 @@
 				<button class="nav-button" type="button" onClick="show_side_nav_bar()">
 					<i class="fa-solid fa-bars fa-2x"></i>			
 				</button>
-				<button class="nav-button" type="button" onclick="expand_or_retract()">
+				<button id="search" class="nav-button" type="button" onclick="expand_or_retract()">
 					<i class="fa-solid fa-magnifying-glass fa-2x"></i>				
 				</button>
 				<input class="search" type="text" name="search" value="">
@@ -69,27 +68,29 @@
 		<!--  -->
 		<main>
 
-			<section class="womoon" onClick="alert_something('Hi! I\'m the moon!')">
-			</section>
-			<section class="womoon-2" onClick="alert_something('Hi! I\'m the moon!')">
-			</section>
 			<!--  -->
 			<section class="main-wrapper">
 
+				<img id="main-pic" src="../../static/women.jpg" alt="two women posing looking at the camera">
+				<img id="main-pic-2" src="../../static/woman2.jpg" alt="two women posing looking at the camera">
+				<section class="shop">
 				<section class="welcome-woman">
 				</section>
 
-				<section class="panel">
-				</section>
-
 				<section id="embera-title-spam">
-					<h2 class="spam sale">Mujeres</h2>
+					<section class="womoon" onClick="alert_something('Hi! I\'m the moon!')"></section>
+					<section class="womoon-2" onClick="alert_something('Hi! I\'m the moon!')"></section>
+
+					<h2 class="sale">Mujeres</h2>
 					<p>Expresate con Embera</p>
+
 				</section>
 
+					
+				</section>
+				<h2 class="semi-title">4 articulos</h2>
 
 				<section class="article-flex-container">
-
 					<article class="default-article">
 						<h3>Embera Golden-Black T-Shirt</h3>
 					</article>
@@ -98,12 +99,6 @@
 						<h3>Embera</h3>
 						<p>This is an article.</p>	
 					</article>
-
-				</section>
-
-				<section id="embera-title-spam">
-					<h2 draggable="true" class="spam sale">SALE! SALE!</h2>
-					<h2 class="spam sale">HASTA 99% OFF</h2>
 				</section>
 
 			<section class="section-empty">
@@ -135,6 +130,6 @@
 				</section>
 			</section>
 		</footer>
-		<script src="../../js/index.js"></script>
+		<script src="./mujeres.js"></script>
 	</body>
 </html>
