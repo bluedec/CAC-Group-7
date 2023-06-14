@@ -1,5 +1,29 @@
 
 
+let isSearchExpanded = false;
+
+const expand_or_retract = () => {
+	if (isSearchExpanded) {
+		let search_box = document.querySelector('.search-expanded');
+
+		search_box.className = "search";
+		isSearchExpanded = false;
+		return;
+	} else {
+		let search_box = document.querySelector('.search');
+
+		search_box.className = "search-expanded"; 
+		isSearchExpanded = true;
+		return;
+	}
+}
+
+const add_className = (elementClass, newClassName) => {
+	let element = document.getElementsByClassName(elementClass);
+	element.className += ` ${newClassName}`;
+}
+
+
 const validate = () => {
 	let name = document.getElementById('user-name').innerHTML;
 	let email = document.getElementById('user-mail').innerHTML;
@@ -14,7 +38,6 @@ const validate = () => {
 }
 
 function validateName(name) {
-	const regex = /^[a-zA-Z ]+$/;
 	return regex.test(name);
 }
 
@@ -30,7 +53,6 @@ document.getElementById('user-mail').onblur = function() {
 		alert("please add a correct email address");
 	}
 }
-
 
 window.addEventListener('resize', () => {
 	console.log("Nooooo don't touch me! Aararrggg");

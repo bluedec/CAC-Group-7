@@ -1,61 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>Embera</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="./css/styles.css" rel="stylesheet">
+		<link href="../../css/styles.css" rel="stylesheet">
 		<link rel="shortcut icon" href="./">
 		<script src="https://kit.fontawesome.com/13c075f7a5.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
-		<!-- Para que la newsletter pueda estar centrada horizontalmente tuve que darle un wrapper -->
-		<section class="newsletter-wrapper">
-			<section id="newsletter" >
-				<h2>Si quieres puedes subscribirte a nuestra newsletter para obtener promociones, productos y mas ! :3 </h2>
-
-				<section class="form-flex-wrapper">
-					<form action="">
-						<article>
-							<label for="user-name">name:</label>
-							<input id="user-name" type="text" name="user-name" placeholder="">
-						</article>
-						<article>
-							<label for="user-mail">email:</label>	
-							<input id="user-mail" type="email" name="user-mail" placeholder="address@example.net">
-						</article>
-
-					</form>
-					<button class="submit-button" type="submit" name="" value="Enviar!" onClick="validate()"><i class="fa-solid fa-paper-plane fa-2x"></i></button>
-				</section>
-
-				<section class="closeButtonWrapper">
-					<div class="divider"></div>
-					<button type="button" class="closeNewsletterButton" onClick="hide_newsletter()">
-						<i class="fa-solid fa-xmark fa-lg"></i>
-					</button>
-				</section>
-			</section>
-		</section>
-
 		<!-- Top Navigation Bar -->
 		<nav id="nav">
 			<button id="home-button" type="button">
-				<a href="index.html" class="home-link">
+				<a href="../../index.html" class="home-link">
 					<i class="fa-solid fa-mountain-sun fa-2x"></i>
 				</a>
 			</button>
 
 			<!-- Container de botones -->
 			<section class="nav-flex-container">
-				<a href="./templates/mujeres/mujeres.html" type="button" class="nav-button"><span>Mujeres</span></a>
+				<a href="#" type="button" class="nav-button"><span>Mujeres</span></a>
 				<a href="#" class="nav-button"><span>Hombres</span></a>
 				<a href="#" class="nav-button"><span>Niños</span></a>
 			</section>	
 
 			<!-- Container de botones a la derecha -->
-			<section id="nav-flex-container">
+			<section id="nav-flex-container-right">
 				<button class="nav-button" type="button" onClick="show_side_nav_bar()">
 					<i class="fa-solid fa-bars fa-2x"></i>			
 				</button>
@@ -93,20 +65,28 @@
 		</header>
 
 
-		<section id="moon" onClick="alert_something('Hi! I\'m the moon!')">
-				
-		</section>
 
 		<!--  -->
 		<main>
 
+			<section class="womoon" onClick="alert_something('Hi! I\'m the moon!')">
+			</section>
+			<section class="womoon-2" onClick="alert_something('Hi! I\'m the moon!')">
+			</section>
 			<!--  -->
 			<section class="main-wrapper">
 
-				<section id="embera-title-spam">
-					<h2 class="spam sale">SALE! SALE!</h2>
-					<h2 class="spam sale inv">HASTA 99% OFF</h2>
+				<section class="welcome-woman">
 				</section>
+
+				<section class="panel">
+				</section>
+
+				<section id="embera-title-spam">
+					<h2 class="spam sale">Mujeres</h2>
+					<p>Expresate con Embera</p>
+				</section>
+
 
 				<section class="article-flex-container">
 
@@ -125,20 +105,6 @@
 					<h2 draggable="true" class="spam sale">SALE! SALE!</h2>
 					<h2 class="spam sale">HASTA 99% OFF</h2>
 				</section>
-
-				<article class="article-flex-container">
-					<article class="default-article">
-						<h1>Embera Golden-Black T-Shirt</h1>
-						<p>Golden</p>	
-						<img src="" alt="">
-					</article>
-					<article class="default-article">
-						<h1>Embera</h1>
-						<p>This is an article.</p>	
-					</article>
-				</article>
-				
-			</section>
 
 			<section class="section-empty">
 			</section>
@@ -169,6 +135,6 @@
 				</section>
 			</section>
 		</footer>
-		<script src="js/index.js"></script>
+		<script src="../../js/index.js"></script>
 	</body>
 </html>
