@@ -1,13 +1,20 @@
 
-
-
+let is_nav_open = false;
+let isSearchExpanded = false;
+let showed = false;
 let search = document.getElementById("search");
-search.addEventListener("click", () => {
-	console.log(search);
+let search_bar = document.getElementById("search-bar"); 
+
+
+search_bar.addEventListener("animationend", () => {
+	search.style.pointerEvents = "all";
 });
 
 
-let isSearchExpanded = false;
+search.addEventListener("animationend", () => {
+});
+
+
 const expand_or_retract = () => {
 	if (isSearchExpanded) {
 		let search_box = document.querySelector('.search-expanded');
@@ -72,7 +79,6 @@ window.addEventListener('scroll', () => {
 });
 
 // whenever the user scrolls, show the newsletter advertisement
-let showed = false;
 window.onscroll = function() {
 	if (showed === true) {
 		return
@@ -127,9 +133,7 @@ function hide_newsletter() {
 }
 
 
-let is_nav_open = false;
 function show_side_nav_bar() {
-	console.log(is_nav_open)
     if (is_nav_open) {
         close_side_nav_bar();
         return

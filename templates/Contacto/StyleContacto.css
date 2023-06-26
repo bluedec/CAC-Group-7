@@ -2,8 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
+
+#formulario {
+	background-color: orange;
+}
+
 .title{
     font-family: 'Times New Roman', Times, serif;
 }

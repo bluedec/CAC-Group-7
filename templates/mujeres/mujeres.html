@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="../../css/styles.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/13c075f7a5.js" crossorigin="anonymous"></script>
+		<link rel="icon" type="image/x-icon" href="../../static/favicon-32x32.png">
 	</head>
 
 	<body>
@@ -21,8 +22,7 @@
 			<!-- Container de botones -->
 			<section class="nav-flex-container">
 				<a href="#" type="button" class="nav-button"><span>Mujeres</span></a>
-				<a href="#" class="nav-button"><span>Hombres</span></a>
-				<a href="#" class="nav-button"><span>Niños</span></a>
+				<a href="#" class="nav-button unavailable"><span>Hombres</span></a>
 			</section>	
 
 			<!-- Container de botones a la derecha -->
@@ -43,11 +43,15 @@
 
 		<!-- Side Navigation Bar -->
 		<section id="side-nav-bar">
-			<button type="button" class="side-nav-button"><span>Mujeres</span></button>
-			<button type="button" class="side-nav-button"><span>Hombres</span></button>
-			<button type="button" class="side-nav-button"><span>Niños</span></button>
-			<a href="./templates/login/signin.html"><button type="button" class="side-nav-button">Iniciar Sesión / Registrarse</button></a>
-			<a href="./templates/Contacto/Contacto.html"><button type="button" class="side-nav-button">contacto</button></a>
+			<section id="rodolfo">
+				<a href="#" class="side-nav-button">Mujeres</a>
+				<a class="side-nav-button unavailable">Hombres</a>
+				<section class="line"></section>
+				<i class="fa-solid fa-user fa-2x"></i>
+				<a href="../login/signin.html" class="side-nav-button">Iniciar Sesión / Registrarse</a>
+				<i class="fa-solid fa-phone fa-2x"></i>
+				<a href="../Contacto/Contacto.html" class="side-nav-button">Contacto</a>
+			</section>
 		</section>
 
 		<header id="main-title-flex">
@@ -82,7 +86,7 @@
 					<section class="womoon-2" onClick="alert_something('Hi! I\'m the moon!')"></section>
 
 					<h2 class="sale">Mujeres</h2>
-					<p>Expresate con Embera</p>
+					<p>Yasss queen!</p>
 
 				</section>
 
