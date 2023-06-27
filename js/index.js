@@ -6,15 +6,6 @@ let search = document.getElementById("search");
 let search_bar = document.getElementById("search-bar"); 
 
 
-search_bar.addEventListener("animationend", () => {
-	search.style.pointerEvents = "all";
-});
-
-
-search.addEventListener("animationend", () => {
-});
-
-
 const expand_or_retract = () => {
 	if (isSearchExpanded) {
 		let search_box = document.querySelector('.search-expanded');

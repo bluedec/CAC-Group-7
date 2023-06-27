@@ -276,10 +276,10 @@ p {
 
 @keyframes wiggleBig {
 	from {
-		transform: rotate(0deg) translate(8px) rotate(0deg);
+		transform: rotate(0deg) translate(11px) rotate(0deg);
 	}
 	to {
-		transform: rotate(360deg) translate(8px) rotate(-360deg);
+		transform: rotate(360deg) translate(11px) rotate(-360deg);
 	}
 }
 
@@ -302,13 +302,17 @@ p {
 }
 
 .shopping-article {
-	width: 20vw;
+	width: calc(150px + 9vw);
+	overflow: hidden;
+	margin: 1rem;
+	padding: 1rem;
 	height: 16rem;
 	position: relative;
 	display: flex;
 	flex-direction: column;
-
 	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
 .shopping-article:hover {
@@ -324,12 +328,16 @@ p {
 }
 
 .shop-img-description {
-	position: relative;
+	color: #d1d1d1;
+	margin: 1.5rem;
+	bottom: 1rem;
+	margin: auto;
 }
 
 .triangle-flex-wrapper {
 	display: flex;
 	flex-grow: 1;
+	padding: 2rem 1rem;
 	flex-basis: 100%;
 }
 
@@ -348,7 +356,7 @@ p {
 	content: "x";
 	position: absolute;
 	transform-origin: center bottom;
-	animation: wiggleBig 19.4s ease-in infinite;
+	animation: wiggleBig 20.4s infinite;
 }
 
 #screen-dimmer {
@@ -606,7 +614,6 @@ p {
 }
 
 #search {
-	pointer-events: none;
 }
 
 .main-wrapper {
