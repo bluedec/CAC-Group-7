@@ -1,29 +1,97 @@
 
+
+const { createApp } = Vue;
+
 let is_nav_open = false;
 let isSearchExpanded = false;
 let showed = false;
 let search = document.getElementById("search");
 let search_bar = document.getElementById("search-bar"); 
 
+createApp({
+    data() {
+        return {
+            title: "Soy el titulo",
+            is_nav_open: false,
+            items: [],
+            items_url: "http://127.0.0.1:3999/items",
+            error: false,
+            loading: false,
+        }
+    },
+    methods: {
+        sayHi() {
+            console.warn("Hiii!! :3");
+        },
+        show_side_nav_bar() {
+            console.log(is_nav_open)
+            if (is_nav_open) {
+                close_side_nav_bar();
+                return
+            }
+            const nav = document.getElementById("side-nav-bar");
+            const dimmer = document.getElementById("screen-dimmer");
 
-const expand_or_retract = () => {
-	if (isSearchExpanded) {
-		let search_box = document.querySelector('.search-expanded');
-		let search_section = document.getElementsByClassName('search-section-expanded');
+            dimmer.style.zIndex = 20;
+            is_nav_open = true;
 
-		search_box.className = "search";
+            let right_position = -260;
+            let dimmer_opacity = 0;
+            let sum = 11;
 
-		isSearchExpanded = false;
-		return;
-	} else {
-		let search_box = document.querySelector('.search');
+            const interv = setInterval(function() {
+                dimmer_opacity += 0.01;
+                right_position += sum;
+                sum -= 0.2;
 
-		search_box.className = "search-expanded"; 
+                dimmer.style.opacity = dimmer_opacity;
+                if (right_position < 0) {
+                    nav.style.right = `${right_position}px`
+                }
 
-		isSearchExpanded = true;
-		return;
-	}
-}
+                if (dimmer_opacity > 0.49 && right_position > -5) {
+                    clearInterval(interv);
+                }
+
+            }, 5);
+               
+        },
+        expand_or_retract() {
+            if (isSearchExpanded) {
+                let search_box = document.querySelector('.search-expanded');
+                let search_section = document.getElementsByClassName('search-section-expanded');
+
+                search_box.className = "search";
+
+                isSearchExpanded = false;
+                return;
+            } else {
+                let search_box = document.querySelector('.search');
+
+                search_box.className = "search-expanded"; 
+
+                isSearchExpanded = true;
+                return;
+            }
+        },
+        fetchApi(url) {
+            fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                this.items   = data;
+                this.loading = true;
+
+            }).catch(err => {
+                console.log(err);
+                this.error = true;
+            });
+        }
+    },
+    created() {
+        this.fetchApi(this.items_url);
+    }
+}).mount("#app");
+
 
 const add_className = (elementClass, newClassName) => {
 	let element = document.getElementsByClassName(elementClass);

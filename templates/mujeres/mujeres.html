@@ -8,145 +8,135 @@
 		<script src="https://kit.fontawesome.com/13c075f7a5.js" crossorigin="anonymous"></script>
 		<link rel="icon" type="image/x-icon" href="../../static/favicon-32x32.png">
 	</head>
-
+    
 	<body>
-		<!-- Top Navigation Bar -->
-		<nav id="nav">
-			<button id="home-button" type="button">
-				<a href="../../index.html" class="home-link">
-					<i class="fa-solid fa-mountain-sun fa-2x"></i>
-				</a>
-			</button>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <div id="app">
+            <h1>{{title}}</h1>
 
-			<!-- Container de botones -->
-			<section class="nav-flex-container">
-				<a href="#" type="button" class="nav-button"><span>Mujeres</span></a>
-				<a href="#" class="nav-button unavailable"><span>Hombres</span></a>
-			</section>	
+            <!-- Top Navigation Bar (in index.js file) -->
+            <nav id="nav"></nav>	
 
-			<!-- Container de botones a la derecha -->
-			<section id="nav-flex-container-right">
-				<button class="nav-button" type="button" onClick="show_side_nav_bar()">
-					<i class="fa-solid fa-bars fa-2x"></i>			
-				</button>
-				<button id="search" class="nav-button" type="button" onclick="expand_or_retract()">
-					<i class="fa-solid fa-magnifying-glass fa-2x"></i>				
-				</button>
-				<input class="search" type="text" name="search" value="">
-			</section>
+            
+            <!-- Screen Dimmer -->
+            <section id="screen-dimmer" onClick="close_side_nav_bar()"></section>
+    
+            <!-- Side Navigation Bar -->
+            <section id="side-nav-bar">
+                <section id="rodolfo">
+                    <a href="../../index.html" class="side-nav-button">Inicio</a>
+                    <a class="side-nav-button unavailable">Hombres</a>
+                    <section class="line"></section>
+                    <i class="fa-solid fa-user fa-2x"></i>
+                    <a href="../login/signin.html" class="side-nav-button">Iniciar Sesión / Registrarse</a>
+                    <i class="fa-solid fa-phone fa-2x"></i>
+                    <a href="../Contacto/Contacto.html" class="side-nav-button">Contacto</a>
+                </section>
+            </section>
+    
+            <header id="main-title-flex">
+                    <div class="triangle"></div>
+                    <a href="index.html" class="home-link">
+                        <h1 class="title">Embera</h1>
+                    </a>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+            </header>
+            <button type="button" v-on:click="sayHi()">Button</button>
+            <main>
+                <section class="main-wrapper">
+                    <img id="main-pic" src="../../static/women.jpg" alt="two women posing looking at the camera">
+                    <img id="main-pic-2" src="../../static/woman2.jpg" alt="two women posing looking at the camera">
+                    <section class="shop">
+                        <section class="welcome-woman"></section>
+    
+                        <section id="embera-title-spam">
+                            <section class="womoon" onClick="alert_something('Hi! I\'m the moon!')"></section>
+                            <section class="womoon-2" onClick="alert_something('Hi! I\'m the moon!')"></section>
+                            <h2 class="sale">Mujeres</h2>
+                            <p>Yasss queen!</p>
+                        </section>
+    
+                        <h2 class="semi-title">4 articulos</h2>
+                        <ul id="shopping-container">
 
-		</nav>	
-
-		<!-- Screen Dimmer -->
-		<section id="screen-dimmer" onClick="close_side_nav_bar()"></section>
-
-		<!-- Side Navigation Bar -->
-		<section id="side-nav-bar">
-			<section id="rodolfo">
-				<a href="../../index.html" class="side-nav-button">Inicio</a>
-				<a class="side-nav-button unavailable">Hombres</a>
-				<section class="line"></section>
-				<i class="fa-solid fa-user fa-2x"></i>
-				<a href="../login/signin.html" class="side-nav-button">Iniciar Sesión / Registrarse</a>
-				<i class="fa-solid fa-phone fa-2x"></i>
-				<a href="../Contacto/Contacto.html" class="side-nav-button">Contacto</a>
-			</section>
-		</section>
-
-		<header id="main-title-flex">
-				<div class="triangle"></div>
-				<a href="index.html" class="home-link">
-					<h1 class="title">Embera</h1>
-				</a>
-				<div class="triangle"></div>
-				<div class="triangle"></div>
-				<div class="triangle"></div>
-				<div class="triangle"></div>
-				<div class="triangle"></div>
-				<div class="triangle"></div>
-		</header>
-
-
-
-		<main>
-			<section class="main-wrapper">
-				<img id="main-pic" src="../../static/women.jpg" alt="two women posing looking at the camera">
-				<img id="main-pic-2" src="../../static/woman2.jpg" alt="two women posing looking at the camera">
-				<section class="shop">
-					<section class="welcome-woman"></section>
-
-					<section id="embera-title-spam">
-						<section class="womoon" onClick="alert_something('Hi! I\'m the moon!')"></section>
-						<section class="womoon-2" onClick="alert_something('Hi! I\'m the moon!')"></section>
-						<h2 class="sale">Mujeres</h2>
-						<p>Yasss queen!</p>
-					</section>
-
-					<h2 class="semi-title">4 articulos</h2>
-					<ul id="shopping-container">
-						<li class="shopping-article">
-							<img class="shop-img" src="../../static/panko.jpg"></img>
-							<section class="shop-img-description">
-								<h4>Name: {this.name}</h4>
-								<h4>Description: {this.description}</h4>
-								<h4>$22000</h4>
-							</section>
-						</li>
-						<li class="shopping-article">
-							<img class="shop-img" src="../../static/panko3.jpg">
-							<section class="shop-img-description">
-								<h4>Name: {this.name}</h4>
-								<h4>Description: {this.description}</h4>
-								<h4>$8000</h4>
-							</section>
-						</li>
-						<li class="shopping-article">
-							<img class="shop-img" src="../../static/panko2.jpg">
-							<section class="shop-img-description">
-								<h4>Name: {this.name}</h4>
-								<h4>Description: {this.description}</h4>
-								<h4>$12000</h4>
-							</section>
-						</li>
-						<li class="shopping-article">
-							<img class="shop-img" src="../../static/coolcsm.png">
-							<section class="shop-img-description">
-								<h4>Name: {this.name}</h4>
-								<h4>Description: {this.description}</h4>
-								<h4>$12000</h4>
-							</section>
-						</li>
-					</ul>
-				</section>
+                            <!-- For loop to show articles -->
+                            <div v-for="item in items">
+                                <li class="shopping-article">
+                                    <img class="shop-img" src="{{item.img}}"></img>
+                                    <section class="shop-img-description">
+                                        <h4>Name: {item.name}</h4>
+                                        <h4>Description: {item.description}</h4>
+                                        <h4>${item.price}</h4>
+                                    </section>
+                                </li>
+                            </div>
 
 
-			<div class="triangle-flex-wrapper">
-				<div class="triangle"></div>
-				<div class="triangle"></div>
-				<div class="triangle"></div>
-				<div class="triangle"></div>
-				<div class="triangle"></div>
-			</div>
-		</main>
+                            <li class="shopping-article">
+                                <img class="shop-img" src="../../static/panko3.jpg">
+                                <section class="shop-img-description">
+                                    <h4>Name: {this.name}</h4>
+                                    <h4>Description: {this.description}</h4>
+                                    <h4>$8000</h4>
+                                </section>
+                            </li>
+                            <li class="shopping-article">
+                                <img class="shop-img" src="../../static/panko2.jpg">
+                                <section class="shop-img-description">
+                                    <h4>Name: {this.name}</h4>
+                                    <h4>Description: {this.description}</h4>
+                                    <h4>$12000</h4>
+                                </section>
+                            </li>
+                            <li class="shopping-article">
+                                <img class="shop-img" src="../../static/coolcsm.png">
+                                <section class="shop-img-description">
+                                    <h4>Name: {this.name}</h4>
+                                    <h4>Description: {this.description}</h4>
+                                    <h4>$12000</h4>
+                                </section>
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    
+                    <div class="triangle-flex-wrapper">
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                    </div>
+                </main>
+                
+                
+                <!--  -->
+                <footer>
+                    <button class="expandable-content-button">About Embera</button>		
+                    <div class="line"></div>
+                    <section class="footer-flex-container">
+                        <section class="about-content">
+                            <ul id="footer-list" title="About Embera">
+                                <li><a href="#">Compañia</a></li>
+                                <li><a href="#">Noticias Corporativas</a></li>
+                            <li><a href="#">Inversionistas</a></li>
+                            <li><a href="#">Sustentabilidad</a></li>
+                            <li><a href="#">Empleos</a></li>
+                        </ul>
+                    </section>
+                </section>
+            </footer>
+        </div>
+        
+		
 
-
-	<!--  -->
-		<footer>
-			<button class="expandable-content-button">About Embera</button>		
-			<div class="line"></div>
-			<section class="footer-flex-container">
-				<section class="about-content">
-					<ul id="footer-list" title="About Embera">
-						<li><a href="#">Compañia</a></li>
-						<li><a href="#">Noticias Corporativas</a></li>
-						<li><a href="#">Inversionistas</a></li>
-						<li><a href="#">Sustentabilidad</a></li>
-						<li><a href="#">Empleos</a></li>
-					</ul>
-				</section>
-			</section>
-		</footer>
-		<script src="../../js/index.js"></script>
-		<script src="./mujeres.js"></script>
+		
+        <script src="./mujeres.js"></script>
+        <script src="../../js/index.js"></script>
 	</body>
-</html>
+    </html>
