@@ -12,11 +12,8 @@
 	<body>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <div id="app">
-            <h1>{{title}}</h1>
-
-            <!-- Top Navigation Bar (in index.js file) -->
+            <!-- Top Navigation Bar (in mujeres.js file) -->
             <nav id="nav"></nav>	
-
             
             <!-- Screen Dimmer -->
             <section id="screen-dimmer" onClick="close_side_nav_bar()"></section>
@@ -46,7 +43,7 @@
                     <div class="triangle"></div>
                     <div class="triangle"></div>
             </header>
-            <button type="button" v-on:click="sayHi()">Button</button>
+           
             <main>
                 <section class="main-wrapper">
                     <img id="main-pic" src="../../static/women.jpg" alt="two women posing looking at the camera">
@@ -61,17 +58,17 @@
                             <p>Yasss queen!</p>
                         </section>
     
-                        <h2 class="semi-title">4 articulos</h2>
+                        <h2 class="semi-title">{{items.length + 3}} articulos</h2>
                         <ul id="shopping-container">
 
                             <!-- For loop to show articles -->
                             <div v-for="item in items">
                                 <li class="shopping-article">
-                                    <img class="shop-img" src="{{item.img}}"></img>
+                                    <img :src="item.img" alt="item.nombre" width="130" height="130" class="article-img"></img>
                                     <section class="shop-img-description">
-                                        <h4>Name: {item.name}</h4>
-                                        <h4>Description: {item.description}</h4>
-                                        <h4>${item.price}</h4>
+                                        <h4>{{item.name}}</h4>
+                                        <h4>Stock: {{item.stock}}</h4>
+                                        <h4>${{item.price}}</h4>
                                     </section>
                                 </li>
                             </div>

@@ -76,8 +76,8 @@ createApp({
         },
         fetchApi(url) {
             fetch(url)
-            .then(res => res.json())
-            .then(data => {
+              .then(res => res.json())
+              .then(data => {
                 this.items   = data;
                 this.loading = true;
 
@@ -85,6 +85,20 @@ createApp({
                 console.log(err);
                 this.error = true;
             });
+        },
+        delete(id) {
+            // 18. We need to assemble (add id) the URL to fetch the exact item
+            const url = this.url + "/" + id;
+            // 19. The kind of method is passed as a field in an "options" object
+            let options = {
+                method: "DELETE"
+            }
+            // 20. 
+            fetch(url, options)
+              .then(res => res.json())
+              .then(data => {
+                location.reload();   
+            }).catch(err => console.log(err));
         }
     },
     created() {

@@ -9,107 +9,110 @@
 
 	</head>
 	<body>
-		<!-- Top Navigation Bar -->
-		<nav id="nav">
-			<button id="home-button" type="button">
-				<a href="../../index.html" class="home-link">
-					<i class="fa-solid fa-mountain-sun fa-2x"></i>
-				</a>
-			</button>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <div id="app">
+            <!-- Top Navigation Bar -->
+            <nav id="nav">
+                <button id="home-button" type="button">
+                    <a href="../../index.html" class="home-link">
+                        <i class="fa-solid fa-mountain-sun fa-2x"></i>
+                    </a>
+                </button>
 
-			<!-- Container de botones -->
-			<section class="nav-flex-container">
-				<a href="../mujeres/mujeres.html" type="button" class="nav-button"><span>Mujeres</span></a>
-				<a href="#" class="nav-button unavailable"><span>Hombres</span></a>
-			</section>	
+                <!-- Container de botones -->
+                <section class="nav-flex-container">
+                    <a href="../mujeres/mujeres.html" type="button" class="nav-button"><span>Mujeres</span></a>
+                    <a href="#" class="nav-button unavailable"><span>Hombres</span></a>
+                </section>	
 
-			<!-- Container de botones a la derecha -->
-			<section id="nav-flex-container-right">
-				<button class="nav-button" type="button" onclick="show_side_nav_bar()">
-					<i class="fa-solid fa-bars fa-2x"></i>			
-				</button>
-				<button id="search" class="nav-button" type="button" onclick="expand_or_retract()">
-					<i class="fa-solid fa-magnifying-glass fa-2x"></i>				
-				</button>
-				<input class="search" type="text" name="search" value="">
-			</section>
+                <!-- Container de botones a la derecha -->
+                <section id="nav-flex-container-right">
+                    <button class="nav-button" type="button" v-on:click="show_side_nav_bar()">
+                        <i class="fa-solid fa-bars fa-2x"></i>			
+                    </button>
+                    <button id="search" class="nav-button" type="button" v-on:click="expand_or_retract()">
+                        <i class="fa-solid fa-magnifying-glass fa-2x"></i>				
+                    </button>
+                    <input class="search" type="text" name="search" value="">
+                </section>
 
-		</nav>	
+            </nav>	
 
-		<!-- Screen Dimmer -->
-		<section id="screen-dimmer" onClick="close_side_nav_bar()"></section>
+            <!-- Screen Dimmer -->
+            <section id="screen-dimmer" onClick="close_side_nav_bar()"></section>
 
-		<!-- Side Navigation Bar -->
-		<section id="side-nav-bar">
-			<section id="rodolfo">
-				<a href="../mujeres/mujeres.html" class="side-nav-button">Mujeres</a>
-				<a class="side-nav-button unavailable">Hombres</a>
-				<section class="line"></section>
-				<i class="fa-solid fa-user fa-2x"></i>
-				<a href="../login/signin.html" class="side-nav-button">Iniciar Sesión / Registrarse</a>
-			</section>
-		</section>
+            <!-- Side Navigation Bar -->
+            <section id="side-nav-bar">
+                <section id="rodolfo">
+                    <a href="../mujeres/mujeres.html" class="side-nav-button">Mujeres</a>
+                    <a class="side-nav-button unavailable">Hombres</a>
+                    <section class="line"></section>
+                    <i class="fa-solid fa-user fa-2x"></i>
+                    <a href="../login/signin.html" class="side-nav-button">Iniciar Sesión / Registrarse</a>
+                </section>
+            </section>
 
-		<section class="contenedor">
-			<form action="https://formsubmit.co/de68b5095eb9df2091000dd2920603da" method="POST" id="formulario">
-				<h2 id="h2form">¿Necesitas ayuda? ¡Contactános!</h2>
-				<section class="input-group">
-					<label>Nombre:</label>
-					<input type="text" name="nombre" placeholder="Ingrese su nombre" id="nombre-contacto" onkeyup="validarNombre()">
-					<span id="nombre-error"></span>
-				</section>
+            <section class="contenedor">
+                <form action="https://formsubmit.co/de68b5095eb9df2091000dd2920603da" method="POST" id="formulario">
+                    <h2 id="h2form">¿Necesitas ayuda? ¡Contactános!</h2>
+                    <section class="input-group">
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre" placeholder="Ingrese su nombre" id="nombre-contacto" onkeyup="validarNombre()">
+                        <span id="nombre-error"></span>
+                    </section>
 
-				<section class="input-group">
-					<label>Apellido:</label>
-					<input type="text" name="apellido" placeholder="Ingrese su apellido" id="apellido-contacto" onkeyup="validarApellido()">
-					<span id="apellido-error"></span>
-				</section>
+                    <section class="input-group">
+                        <label>Apellido:</label>
+                        <input type="text" name="apellido" placeholder="Ingrese su apellido" id="apellido-contacto" onkeyup="validarApellido()">
+                        <span id="apellido-error"></span>
+                    </section>
 
-				<section class="input-group">
-					<label>Email:</label>
-					<input type="email" name="email" placeholder="Ingrese su email" id="email-contacto" onkeyup="validarEmail()">
-					<span id="email-error"></span>
-				</section>
+                    <section class="input-group">
+                        <label>Email:</label>
+                        <input type="email" name="email" placeholder="Ingrese su email" id="email-contacto" onkeyup="validarEmail()">
+                        <span id="email-error"></span>
+                    </section>
 
-				<section class="input-group">
-					<label id="paisTexto" for="pais">País:</label>
-					<select id="pais" name="pais" onclick="validarPais()">
-						<option id="blank" value="" selected="selected" disabled="disabled">Seleccione su país</option>
-						<option value="argentina">Argentina</option>
-						<option value="brasil">Brasil</option>
-						<option value="peru">Perú</option>
-						<option value="chile">Chile</option>
-					</select>
-					<span id="pais-error"></span>
-				</section>
-				<section class="input-group">
-					<label>Dejanos tu mensaje:</label>
-					<textarea rows="5" id="mensaje-contacto" name="mensaje" onkeyup="validarMensaje()" placeholder="Mensaje:"></textarea>
-					<span id="mensaje-error"></span>
-				</section>
+                    <section class="input-group">
+                        <label id="paisTexto" for="pais">País:</label>
+                        <select id="pais" name="pais" onclick="validarPais()">
+                            <option id="blank" value="" selected="selected" disabled="disabled">Seleccione su país</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="peru">Perú</option>
+                            <option value="chile">Chile</option>
+                        </select>
+                        <span id="pais-error"></span>
+                    </section>
+                    <section class="input-group">
+                        <label>Dejanos tu mensaje:</label>
+                        <textarea rows="5" id="mensaje-contacto" name="mensaje" onkeyup="validarMensaje()" placeholder="Mensaje:"></textarea>
+                        <span id="mensaje-error"></span>
+                    </section>
 
-				<button id="sendBtn" onclick="validarForm()">Enviar</button>
-				<input type="hidden" name="_next" value="http://127.0.0.1:5500/Contacto/Contacto.html">
-				<input type="hidden" name="_captcha" value="false">
-			</form>
-		</section>
+                    <button id="sendBtn" onclick="validarForm()">Enviar</button>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/Contacto/Contacto.html">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </section>
 
-		<footer>
-			<button class="expandable-content-button">About Embera</button>		
-			<div class="line"></div>
-			<section class="footer-flex-container">
-				<section class="about-content">
-					<ul id="footer-list" title="About Embera">
-						<li><a href="#">Compañia</a></li>
-						<li><a href="#">Noticias Corporativas</a></li>
-						<li><a href="#">Inversionistas</a></li>
-						<li><a href="#">Sustentabilidad</a></li>
-						<li><a href="#">Empleos</a></li>
-					</ul>
-				</section>
-			</section>
-		</footer>
-		<script src="../../js/index.js"></script>
-		<script src="scriptContacto.js"></script>
+            <footer>
+                <button class="expandable-content-button">About Embera</button>		
+                <div class="line"></div>
+                <section class="footer-flex-container">
+                    <section class="about-content">
+                        <ul id="footer-list" title="About Embera">
+                            <li><a href="#">Compañia</a></li>
+                            <li><a href="#">Noticias Corporativas</a></li>
+                            <li><a href="#">Inversionistas</a></li>
+                            <li><a href="#">Sustentabilidad</a></li>
+                            <li><a href="#">Empleos</a></li>
+                        </ul>
+                    </section>
+                </section>
+            </footer>
+            <script src="../../js/index.js"></script>
+            <script src="scriptContacto.js"></script>
+        </div>
 	</body>
 </html>

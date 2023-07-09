@@ -12,124 +12,152 @@
 	</head>
 
 	<body>
+        <div id="app">
 
-        <!-- Para que la newsletter pueda estar centrada horizontalmente tuve que darle un wrapper -->
-        <section class="newsletter-wrapper">
-            <section id="newsletter">
-                <h2>Si quieres puedes subscribirte a nuestra newsletter para obtener promociones, productos y mas ! :3 </h2>
-            
-                <section class="form-flex-wrapper">
-                    <form action="">
-                        <article>
-                            <label for="user-name">name:</label>
-                            <input id="user-name" type="text" name="user-name" placeholder="">
-                        </article>
-                        <article>
-                            <label for="user-mail">email:</label>
-                            <input id="user-mail" type="email" name="user-mail" placeholder="address@example.net">
-                        </article>
-            
-                    </form>
-                    <button class="submit-button" type="submit" name="" value="Enviar!" onClick="validate()"><i
-                            class="fa-solid fa-paper-plane fa-2x"></i></button>
-                </section>
-            
-                <section class="closeButtonWrapper">
-                    <div class="divider"></div>
-                    <button type="button" class="closeNewsletterButton" onClick="hide_newsletter()">
-                        <i class="fa-solid fa-xmark fa-lg"></i>
-                    </button>
-                </section>
-            </section>
-        </section>
-
-        <!-- Top Navigation Bar -->
-        <nav id="nav">
-            <button id="home-button" type="button">
-                <a href="index.html" class="home-link">
-                    <i class="fa-solid fa-mountain-sun fa-2x"></i>
-                </a>
-            </button>
-
-            <!-- Container de botones -->
-            <section class="nav-flex-container">
-                <a href="./templates/mujeres/mujeres.html" type="button" class="nav-button"><span>Mujeres</span></a>
-                <a href="#" class="nav-button unavailable"><span>Hombres</span></a>
-            </section>	
-
-            <!-- Container de botones a la derecha -->
-            <section id="nav-flex-container-right">
-                <button class="nav-button" type="button" onClick="show_side_nav_bar()">
-                    <i class="fa-solid fa-bars fa-2x"></i>			
-                </button>
-                <button id="search" class="nav-button" type="button" onclick="expand_or_retract()">
-                    <i class="fa-solid fa-magnifying-glass fa-2x"></i>				
-                </button>
-                <input id="search-bar" class="search" type="text" name="search" value="">
-            </section>
-
-        </nav>	
-
-        <!-- Screen Dimmer -->
-        <section id="screen-dimmer" onClick="close_side_nav_bar()"></section>
-
-        <!-- Side Navigation Bar -->
-        <section id="side-nav-bar">
-
-            <section id="rodolfo">
-                <a href="templates/mujeres/mujeres.html" class="side-nav-button">Mujeres</a>
-                <a class="side-nav-button unavailable">Hombres</a>
-                <section class="line"></section>
-                <i class="fa-solid fa-user fa-2x"></i>
-                <a href="./templates/login/signin.html" class="side-nav-button">Iniciar Sesión / Registrarse</a>
-                <i class="fa-solid fa-phone fa-2x"></i>
-                <a href="./templates/Contacto/Contacto.html" class="side-nav-button">Contacto</a>
-            </section>
-
-        </section>
-
-        <header id="main-title-flex">
-                <div class="triangle"></div>
-                <a href="index.html" class="home-link">
-                    <h1 class="title">Embera</h1>
-                </a>
-                <div class="triangle"></div>
-                <div class="triangle"></div>
-                <div class="triangle"></div>
-                <div class="triangle"></div>
-                <div class="triangle"></div>
-                <div class="triangle"></div>
-        </header>
-
-
-        <section id="moon" onClick="alert_something('Hi! I\'m the moon!')">
+            <!-- Para que la newsletter pueda estar centrada horizontalmente tuve que darle un wrapper -->
+            <section class="newsletter-wrapper">
+                <section id="newsletter">
+                    <h2>Si quieres puedes subscribirte a nuestra newsletter para obtener promociones, productos y mas ! :3 </h2>
                 
-        </section>
-
-        <!--  -->
-        <main>
-
+                    <section class="form-flex-wrapper">
+                        <form action="">
+                            <article>
+                                <label for="user-name">name:</label>
+                                <input id="user-name" type="text" name="user-name" placeholder="">
+                            </article>
+                            <article>
+                                <label for="user-mail">email:</label>
+                                <input id="user-mail" type="email" name="user-mail" placeholder="address@example.net">
+                            </article>
+                
+                        </form>
+                        <button class="submit-button" type="submit" name="" value="Enviar!" onClick="validate()"><i
+                                class="fa-solid fa-paper-plane fa-2x"></i></button>
+                    </section>
+                
+                    <section class="closeButtonWrapper">
+                        <div class="divider"></div>
+                        <button type="button" class="closeNewsletterButton" onClick="hide_newsletter()">
+                            <i class="fa-solid fa-xmark fa-lg"></i>
+                        </button>
+                    </section>
+                </section>
+            </section>
+    
+            <!-- Top Navigation Bar -->
+            <nav id="nav">
+                <button id="home-button" type="button">
+                    <a href="index.html" class="home-link">
+                        <i class="fa-solid fa-mountain-sun fa-2x"></i>
+                    </a>
+                </button>
+    
+                <!-- Botones izquierda -->
+                <section class="nav-flex-container">
+                    <a href="./templates/mujeres/mujeres.html" type="button" class="nav-button"><span>Mujeres</span></a>
+                    <a href="#" class="nav-button unavailable"><span>Hombres</span></a>
+                </section>	
+    
+                <!-- Botones derecha -->
+                <section id="nav-flex-container-right">
+                    <button class="nav-button" type="button" onclick="show_side_nav_bar()">
+                        <i class="fa-solid fa-bars fa-2x"></i>			
+                    </button>
+                    <button id="search" class="nav-button" type="button" v-on:click="expand_or_retract()">
+                        <i class="fa-solid fa-magnifying-glass fa-2x"></i>				
+                    </button>
+                    <input id="search-bar" class="search" type="text" name="search" value="">
+                </section>
+    
+            </nav>	
+    
+            <!-- Screen Dimmer -->
+            <section id="screen-dimmer" onClick="close_side_nav_bar()"></section>
+    
+            <!-- Side Navigation Bar -->
+            <section id="side-nav-bar">
+    
+                <section id="rodolfo">
+                    <a href="templates/mujeres/mujeres.html" class="side-nav-button">Mujeres</a>
+                    <a class="side-nav-button unavailable">Hombres</a>
+                    <section class="line"></section>
+                    <i class="fa-solid fa-user fa-2x"></i>
+                    <a href="./templates/login/signin.html" class="side-nav-button">Iniciar Sesión / Registrarse</a>
+                    <i class="fa-solid fa-phone fa-2x"></i>
+                    <a href="./templates/Contacto/Contacto.html" class="side-nav-button">Contacto</a>
+                </section>
+    
+            </section>
+    
+            <header id="main-title-flex">
+                    <div class="triangle"></div>
+                    <a href="index.html" class="home-link">
+                        <h1 class="title">Embera</h1>
+                    </a>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+                    <div class="triangle"></div>
+            </header>
+    
+    
+            <section id="moon" onClick="alert_something('Hi! I\'m the moon!')">
+                    
+            </section>
+    
             <!--  -->
-            <section class="main-wrapper">
-
-                <section id="embera-title-spam">
-                    <h2 class="spam sale">SALE! SALE!</h2>
-                    <h2 class="spam sale inv">HASTA 99% OFF</h2>
-                </section>
-
-                <section class="article-flex-container">
-                    <article class="default-article">
-                        <h3>Embera Golden-Black T-Shirt</h3>
+            <main>
+    
+                <!--  -->
+                <section class="main-wrapper">
+    
+                    <section id="embera-title-spam">
+                        <h2 class="spam sale">SALE! SALE!</h2>
+                        <h2 class="spam sale inv">HASTA 99% OFF</h2>
+                    </section>
+    
+                    <section class="article-flex-container">
+                        <article class="default-article">
+                            <h3>Embera Golden-Black T-Shirt</h3>
+                        </article>
+    
+                        <article class="default-article">
+                            <h3>Embera</h3>
+                            <p>This is an article.</p>	
+                        </article>
+                    </section>
+    
+                    <section id="embera-title-spam">
+                        <h2 draggable="true" class="spam sale">SALE! SALE!</h2>
+                    <div class="triangle-flex-wrapper">
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                        <div class="triangle"></div>
+                    </div>
+                        <h2 class="spam sale">HASTA 99% OFF</h2>
+                    </section>
+    
+                    <article class="article-flex-container">
+                        <article class="default-article">
+                            <h1>Embera Golden-Black T-Shirt</h1>
+                            <p>Golden</p>	
+                            <img src="" alt="">
+                        </article>
+                        <article class="default-article">
+                            <h1>Embera</h1>
+                            <p>This is an article.</p>	
+                        </article>
                     </article>
-
-                    <article class="default-article">
-                        <h3>Embera</h3>
-                        <p>This is an article.</p>	
-                    </article>
+                    
                 </section>
-
-                <section id="embera-title-spam">
-                    <h2 draggable="true" class="spam sale">SALE! SALE!</h2>
+    
+                <section class="section-empty">
+                </section>
+                
                 <div class="triangle-flex-wrapper">
                     <div class="triangle"></div>
                     <div class="triangle"></div>
@@ -137,53 +165,27 @@
                     <div class="triangle"></div>
                     <div class="triangle"></div>
                 </div>
-                    <h2 class="spam sale">HASTA 99% OFF</h2>
+            </main>
+    
+    
+            <!--  -->
+            <footer>
+                <button class="expandable-content-button">About Embera</button>		
+                <div class="line"></div>
+                <section class="footer-flex-container">
+                    <section class="about-content">
+                        <ul id="footer-list" title="About Embera">
+                            <li><a href="#">Compañia</a></li>
+                            <li><a href="#">Noticias Corporativas</a></li>
+                            <li><a href="#">Inversionistas</a></li>
+                            <li><a href="#">Sustentabilidad</a></li>
+                            <li><a href="#">Empleos</a></li>
+                        </ul>
+                    </section>
                 </section>
-
-                <article class="article-flex-container">
-                    <article class="default-article">
-                        <h1>Embera Golden-Black T-Shirt</h1>
-                        <p>Golden</p>	
-                        <img src="" alt="">
-                    </article>
-                    <article class="default-article">
-                        <h1>Embera</h1>
-                        <p>This is an article.</p>	
-                    </article>
-                </article>
+            </footer>
+            <script src="js/index.js"></script>
                 
-            </section>
-
-            <section class="section-empty">
-            </section>
-            
-            <div class="triangle-flex-wrapper">
-                <div class="triangle"></div>
-                <div class="triangle"></div>
-                <div class="triangle"></div>
-                <div class="triangle"></div>
-                <div class="triangle"></div>
-            </div>
-        </main>
-
-
-        <!--  -->
-        <footer>
-            <button class="expandable-content-button">About Embera</button>		
-            <div class="line"></div>
-            <section class="footer-flex-container">
-                <section class="about-content">
-                    <ul id="footer-list" title="About Embera">
-                        <li><a href="#">Compañia</a></li>
-                        <li><a href="#">Noticias Corporativas</a></li>
-                        <li><a href="#">Inversionistas</a></li>
-                        <li><a href="#">Sustentabilidad</a></li>
-                        <li><a href="#">Empleos</a></li>
-                    </ul>
-                </section>
-            </section>
-        </footer>
-        <script src="js/index.js"></script>
-            
-	</body>
+        </div>
+    </body>
 </html>

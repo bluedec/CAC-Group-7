@@ -7,7 +7,7 @@ document.getElementById("nav").innerHTML = `
 
 <!-- Container de botones -->
 <section class="nav-flex-container">
-<a href="#" type="button" class="nav-button"><span>Mujeres</span></a>
+<a href="../../index.html" type="button" class="nav-button"><span>Inicio</span></a>
 <a href="#" class="nav-button unavailable"><span>Hombres</span></a>
 </section>	
 
@@ -16,7 +16,7 @@ document.getElementById("nav").innerHTML = `
 <button class="nav-button" type="button" onClick="show_side_nav_bar()">
     <i class="fa-solid fa-bars fa-2x"></i>			
 </button>
-<button id="search" class="nav-button" type="button" onclick="expand_or_retract()">
+<button id="search" class="nav-button" type="button" v-on:click="expand_or_retract()">
     <i class="fa-solid fa-magnifying-glass fa-2x"></i>				
 </button>
 <input class="search" type="text" name="search" value="">

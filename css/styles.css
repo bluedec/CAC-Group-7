@@ -303,7 +303,8 @@ p {
 
 .shopping-article {
 	width: calc(150px + 9vw);
-	overflow: hidden;
+    cursor: pointer;
+    overflow: hidden;
 	margin: 1rem;
 	padding: 1rem;
 	height: 16rem;
@@ -332,6 +333,14 @@ p {
 	margin: 1.5rem;
 	bottom: 1rem;
 	margin: auto;
+}
+
+.article-img {
+    overflow: hidden;
+    max-width: 80%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
 
 .triangle-flex-wrapper {
